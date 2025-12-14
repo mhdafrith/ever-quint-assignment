@@ -1,0 +1,18 @@
+[logger.root]
+level = "INFO"
+handlers = ["console", "file"]
+
+[handler.console]
+class = "logging.StreamHandler"
+level = "INFO"
+formatter = "simple"
+stream = "ext://sys.stdout"
+
+[handler.file]
+class = "logging.FileHandler"
+level = "INFO"
+formatter = "simple"
+args = ["run_logs/app.log", "a"]
+
+[formatter.simple]
+format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

@@ -1,0 +1,161 @@
+✅ 1. Python for Data Science
+🔹 Core Concepts
+Variables, data types, lists, tuples, dicts
+List & dict comprehensions
+Error handling (try–except)
+Functions, lambda
+Modules, packages
+OOP basics (class, object, init, inheritance)
+🔹 Important Libraries
+NumPy
+Arrays, broadcasting
+np.mean, np.std, reshape, axis, slicing
+Pandas
+read_csv, df.info, df.describe
+Handling missing values: fillna, dropna
+groupby, merge, concat
+apply, lambda
+Datetime handling
+Matplotlib / Seaborn
+Line, bar, boxplot, hist, heatmap
+✅ 2. Statistics & Probability
+🔹 Descriptive Statistics
+Mean, Median, Mode
+Variance, Std Dev
+Range, IQR
+Skewness, Kurtosis
+🔹 Probability Basics
+Conditional probability
+Bayes theorem
+PDFs, PMFs, CDFs
+🔹 Distributions
+Normal, Binomial, Poisson
+Uniform, Exponential
+🔹 Sampling
+Random sampling
+Stratified sampling
+Sampling bias
+🔹 Hypothesis Testing
+Null vs Alternate
+p-value
+t-test, z-test
+Chi-square test
+ANOVA
+✅ 3. EDA (Exploratory Data Analysis)
+🔹 Key Techniques
+Univariate → hist, boxplot
+Bivariate → scatter, correlation heatmap
+Outlier detection → IQR, Z-score
+Missing values → MCAR, MAR, MNAR
+Feature engineering → binning, encoding
+🔹 Encoding
+Label Encoding
+One-hot Encoding
+Target Encoding (advanced)
+✅ 4. Machine Learning
+🔹 Supervised Learning
+Regression
+Linear Regression
+Polynomial Regression
+Decision Tree Regressor
+Random Forest Regressor
+Gradient Boosting, XGBoost
+Metrics: R², MAE, MSE, RMSE
+Classification
+Logistic Regression
+KNN, SVM
+Decision Tree
+Random Forest
+XGBoost, LightGBM
+Metrics: Accuracy, Precision, Recall, F1, ROC-AUC
+🔹 Unsupervised Learning
+K-Means
+Hierarchical
+DBSCAN
+PCA (Dimensionality reduction)
+🔹 Overfitting vs Underfitting
+Train-test split
+Cross-validation
+Regularization → L1, L2 (Lasso/Ridge)
+✅ 5. Feature Engineering
+Handling missing values
+Encoding categorical
+Scaling → StandardScaler, MinMaxScaler
+Log transform
+Feature selection → RFE, SelectKBest
+Removing multicollinearity (VIF)
+✅ 6. Deep Learning (DL)
+🔹 Neural Network Basics
+Perceptron
+Activation functions → ReLU, Sigmoid, Tanh
+Loss functions → CrossEntropy, MSE
+Optimizers → SGD, Adam
+🔹 ANN Architecture
+Input layer
+Hidden layers
+Output layer
+Forward & backward propagation
+🔹 CNN Basics
+Convolution
+Filters/kernels
+Pooling
+Flatten → Dense
+🔹 RNN/LSTM
+Sequential data
+Vanishing gradient
+LSTM gates (Input, Output, Forget)
+✅ 7. NLP (Beginner Friendly)
+Since you said you’re not familiar with NLP, here are simple notes:
+🔹 Core Concepts
+Tokenization
+Stopwords removal
+Stemming vs Lemmatization
+Bag of Words (BoW)
+TF–IDF
+Word2Vec → embeddings
+Transformers → BERT, LLaMA, GPT
+🔹 Embeddings (Important for RAG)
+Converts text → vector of numbers
+Cosine similarity used to compare meaning
+🔹 Applications
+Sentiment analysis
+Text classification
+Named entity recognition
+Summarization, Q&A
+✅ 8. RAG (Retrieval-Augmented Generation)
+🔹 Flow
+Load documents
+Split into chunks
+Create embeddings
+Store in Vector DB (FAISS, Pinecone, ChromaDB)
+Query → embed → similarity search
+LLM generates final answer
+🔹 Chunking
+Default: 1000 tokens
+Overlap: 20%
+RecursiveCharacterTextSplitter
+For code: use 100–200 overlap
+🔹 Key Components
+Embedding model (e.g., bge-large, all-mpnet)
+Vector DB
+LLM → Groq, OpenAI, Mistral
+✅ 9. Deployment
+🔹 Tools
+Streamlit
+FastAPI
+Flask
+Docker
+AWS (EC2, S3, Lambda)
+🔹 ML Model Deployment Flow
+Train model
+Save model (pickle, joblib)
+Load in API
+Create endpoints
+Deploy to cloud
+✅ 10. SQL Basics
+SELECT
+WHERE
+GROUP BY
+ORDER BY
+JOIN (Inner, Left, Right, Full)
+Aggregate functions → COUNT, SUM, AVG

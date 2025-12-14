@@ -1,0 +1,252 @@
+Drive your sales team to success with Sales Pipeline App
+small-Drive your sales team to success with Sales Pipeline App
+Drive your sales team to success with Sales Pipeline App
+Perkins&Will is a leading name in global architecture and design, renowned for its innovative approach and dedication to excellence. With a presence spanning continents, the firm’s diverse teams bring visionary ideas to life, setting new benchmarks in design and creativity.
+To complement their dynamic operations, we introduced a custom app that revolutionized their sales tracking. By integrating data from Excel, PowerBI, and Deltek into a unified dashboard, the platform simplifies lead tracking, streamlines pipeline management, and enhances deal closure. This has allowed teams to collaborate seamlessly, optimize budgets, and drive revenue growth.
+
+
+Get Clear Insights into every Opportunity 
+Our app offers a comprehensive view of every opportunity—location, status, team members, win probability, revenue estimates, and more. Clean visuals like tables and graphs make decision-making faster and more intuitive. 
+
+
+At the top, you can quickly see whether the opportunity is still a lead, in the pursuit stage, awarded, or booked. Scrolling down, you’ll find all key information, including project location, win probability, and a detailed revenue breakdown. The “Team Member” section shows all active members involved in the project. By clicking the arrow next to “Team,” you can view their roles, areas of responsibility, and contact options.
+Advanced Search and Sorting Made Simple
+Efficiently manage projects with smart filters that refine data by studio, client, revenue, or stage. For instance, finding awarded leads in Chicago is as simple as selecting “Primary Studio: Chicago” and filtering by “Stage: Awarded.”
+
+The more filters you apply, the more specific your project results will be. This feature is particularly useful if you have a diverse portfolio of leads and clients you find challenging to manage.
+Monitor Revenue with Precision
+Keep track of budgets, revenue, and financial performance in real-time. Gain actionable insights to identify high-priority opportunities and maximize profitability.
+
+Transform Your Sales Process Today
+With features like instant filtering, detailed opportunity insights, and real-time revenue tracking, our app is designed to make your sales process more efficient and effective. Whether you’re managing projects across multiple locations or keeping track of complex portfolios, our app provides the tools you need to succeed.
+
+X
+Facebook
+LinkedIn
+CONTACT
+PRIVACY POLICY
+© 2025 EVER QUINT
+
+
+
+How We Took the Pain Out of People Management for Perkins&Will
+small-How We Took the Pain Out of People Management for Perkins&Will
+How We Took the Pain Out of People Management for Perkins&Will
+Perkins & Will is a globally recognized leader in the architecture and design industry, known for its commitment to creativity, innovation, and excellence. The firm operates across multiple continents, employing a diverse and talented workforce dedicated to delivering high-quality design solutions.
+Despite this success, the firm faced a challenge with its employee management system. There was no centralized location to view employee details and their corresponding projects. Users had to navigate between different platforms—first going to UKG to find employee IDs, then switching to Deltek to locate project information.
+To address this, we developed a unified portal that integrated employee data with their projects and pursuits, streamlining the process and improving overall efficiency.
+
+The People app is designed to capture all the essential details about an individual within a company. Beyond basic information like name, email address, and job role, our app covers key aspects such as digital portfolios, recent activities, active projects, connections, and more. 
+The layout is simple and intuitive. When you view a profile, you’ll find clear sections—like Information, Professional, Activities, Connections, Pipeline, and Projects—to help you quickly navigate and access the details you need. 
+One of the key features is the ability to see who’s working on what project directly from the profile. No need to visit the pipeline app and search through various projects. Whether someone is actively engaged in a project or has moved on, their profile is always updated in real-time. 
+
+So, even if a task is given to a person in the pipeline app, the activities section will keep track of the tasks that have been completed or remain. 
+The connections section further covers the bookmarked list of important people outside the organization. In the contacts app, you can easily bookmark important people and they will show up in your connections in the people app. 
+
+Got More Ideas to Enhance People Management?
+We did all this for Perkins & Will, making people management much easier for them.
+Are you also struggling with scattered employee data that makes it hard to track team progress? Do your teams feel frustrated switching between different platforms to find project details? Maybe managing resources across systems is slowing down your workflow?
+If you’re facing challenges like these, our team is here to help. 
+
+X
+Facebook
+LinkedIn
+CONTACT
+
+
+Behind every great service there’s a great team, Meet Ours.
+small-Akash Kumar A D
+Akash Kumar A D
+linkedin-line
+email-line
+Senior Application Developer II
+small-Ayush Kumar Sinha
+Ayush Kumar Sinha
+linkedin-line
+email-line
+Senior Application Developer II
+small-Bagyalakshmi Karuppasamy
+Bagyalakshmi Karuppasamy
+linkedin-line
+email-line
+Senior Application Developer I
+small-Bhuvanesh Chezhian
+Bhuvanesh Chezhian
+linkedin-line
+email-line
+Chief of Collaboration
+small-Fazil Fahath
+Fazil Fahath
+linkedin-line
+email-line
+Visual Design Engineer
+small-Fizan Nagarchi
+Fizan Nagarchi
+linkedin-line
+email-line
+Software Development Engineer II
+small-Gokul Raj
+Gokul Raj
+linkedin-line
+email-line
+Software Development Engineer II
+Gughan Appichiappan
+linkedin-line
+email-line
+Senior Application Developer I
+small-Khalid Zaid
+Khalid Zaid
+linkedin-line
+email-line
+Application Developer I
+small-Mahalakshmi Murugesan
+Mahalakshmi Murugesan
+linkedin-line
+email-line
+Application Developer I
+Naveena Kumanan
+linkedin-line
+email-line
+Application Developer I
+small-Pinky Choudhary
+Pinky Choudhary
+linkedin-line
+email-line
+Project Manager
+small-Priyanka Pattnaik
+Priyanka Pattnaik
+linkedin-line
+email-line
+Product Designer II
+Rakesh Raj B S
+linkedin-line
+email-line
+Application Developer I
+small-Ramanathan Muthappan
+Ramanathan Muthappan
+linkedin-line
+email-line
+Founder & CEO
+small-Ramit Chhabra
+Ramit Chhabra
+linkedin-line
+email-line
+Application Developer I
+small-Ranjita G L
+Ranjita G L
+linkedin-line
+email-line
+Associate Project Manager
+small-Sayli Divekar
+Sayli Divekar
+linkedin-line
+email-line
+Product Designer I
+small-Surendar Srinivasan
+Surendar Srinivasan
+linkedin-line
+email-line
+Application Developer I
+small-Tamilarasan Murugan
+Tamilarasan Murugan
+linkedin-line
+email-line
+Application Developer I
+small-Uttkarsh Raj
+Uttkarsh Raj
+linkedin-line
+email-line
+Software Development Engineer I
+Vanshika Sood
+linkedin-line
+email-line
+Associate Project Manager
+small-Vijayan Gopalsamy
+Vijayan Gopalsamy
+linkedin-line
+email-line
+Design Sherpa
+small-Vikas Suresh
+Vikas Suresh
+linkedin-line
+email-line
+Software Development Engineer II
+X
+Facebook
+LinkedIn
+CONTACT
+PRIVACY POLICY
+© 2025 EVER QUINT
+
+
+Logo
+Ever Quint Technologies Private Limited
+CIN: U62013TN2025PTC185793
+Suite #302, Workafella High Street, 431, Anna Salai,
+Teynampet, Chennai, Tamil Nadu, India – 600018
+
+
+
+Careers
+
+Explore
+Career Opportunities
+With Ever Quint
+Diversity, Passion and Ownership
+Reach out at hello@everquint.com with your resume and interested position.
+Our Philosophy
+Customer Centric
+Customer Centric
+
+Nimble
+
+Continuous Learning
+Cutting Edge Technology
+Cutting Edge Technology
+Continuous Innovation
+Continuous Innovation
+Independent Thinking
+Independent Thinking
+Fostering Trust
+Fostering Trust
+Remote First
+Remote First
+Current Openings
+Senior React Developer
+We are seeking a highly skilled and experienced Senior React Developer to join our dynamic team. The ideal candidate will have a strong background in JavaScript, experience in designing and architecting web applications using CSS and HTML5, and a proven ability to provide technical leadership. This role involves collaborating with cross-functional teams, ensuring code quality, optimizing performance, and guiding the development team towards best practices
+Roles and Responsibilities
+Developing and Implementing UI Components: Involves creating new features, building reusable components, and translating designs and wire frames into high-quality code.
+Optimizing Performance: Focuses on enhancing the performance of components across different web browsers and devices, including profiling and improving frontend performance.
+State Management: Manage application state using Redux or similar libraries, ensuring consistency and efficiency in state handling across the application.
+Mentoring and Leading the Team: Includes guiding junior developers, leading client services and projects, and making necessary adjustments to achieve goals.
+Ensuring Code Quality: Involves writing, auditing, and improving test coverage, participating in code reviews, and documenting and refactoring code.
+Collaborating with Cross-Functional Teams: Entails working closely with UX designers, project managers, stakeholders, and clients to create effective applications and coordinating with various teams on infrastructure.
+Staying Up-to-Date with Latest Trends: Requires keeping current with the latest industry trends and technologies
+Senior Product Designer 
+We are seeking a talented and creative Product Designer with a strong focus on UI/UX to join our team. The ideal candidate will have a deep understanding of user-centered design principles and the ability to create visually appealing and intuitive user interfaces. This role requires collaboration with cross-functional teams, including developers, and stakeholders, to deliver high-quality digital products that enhance user experiences.
+Roles and Responsibilities
+Collaborate with cross-functional teams to conceptualize, design, and prototype innovative digital or physical products.
+Develop physical, 2D/3D, immersive prototypes and videos for products.
+Stay updated with the latest advancements in product design and development, integrating innovative approaches for sustained competitive advantage.
+Conducting user research and gathering feedback to inform design decisions.
+Creating prototypes, wireframes, and mockups to visualize product concepts.
+Collaborating with cross-functional teams, including marketing and development, to ensure cohesive product design.
+Identifying new product opportunities and analyzing market compatibility.
+Implementing design specifications and maintaining design systems for consistency
+MERN Stack Developer
+We are looking for a skilled MERN Stack Developer to join our team. In this role, you will be responsible for designing, developing, and maintaining full-stack applications using MongoDB, Express.js, React.js, and Node.js. You will collaborate with cross-functional teams to create efficient, scalable, and user-friendly web solutions.
+Roles and Responsibilities
+Write clean and reusable codes and follow best practices.
+Build and maintain Javascript packages, microservices, UI Components with the latest tools.
+Database querying using best practices – SQL, MongoDB, Redis and Elastic Search.
+Message Queueing with Kafka.
+Actively participate in improving the quality of the built elements.
+You will work in collaborative, product-focused teams to build innovative customer experiences and help solve technically challenging problems across our teams.
+Follow established development standards and best practices while working with new or existing systems and tools and develop bug fixes
+Respond to problem escalations and resolve critical production issues
+X
+Facebook
+LinkedIn
+CONTACT
+PRIVACY POLICY
+© 2025 EVER QUINT

@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; padding: 20px; background:#f7f9fc;}
+.container { max-width:900px; margin:0 auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 3px 12px rgba(0,0,0,0.08);}
+#chart { margin-top:20px; }
+.bar { stroke:#333; stroke-width:1; fill:#ffd54f; }
+.water { fill:#4fc3f7; opacity:0.9; }
+.gridline { stroke:#e0e0e0; stroke-width:1; }
+.result { margin-top:10px; font-weight:700;}
