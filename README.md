@@ -84,6 +84,29 @@ The application is structured into 4 main deliverables:
     ```
     This generates `agent_evaluation_log.json` containing run logs for 8 test cases (5 Easy, 3 Tricky).
 
+### 5. RAG Evaluation (Ragas)
+**Objective**: Quantitatively assess the RAG pipeline's accuracy using **Ragas** metrics.
+- **Tools used**:
+    - **Ragas**: For calculating Context Precision/Recall, Faithfulness, and Answer Relevancy.
+    - **Groq (Llama-3)**: As the "Judge LLM" to evaluate responses.
+    - **HuggingFace Embeddings**: For vector-based similarity metrics.
+- **Methodology**:
+    - Used a test set of 5 Q&A pairs derived from `about_everquint.txt`.
+    - Configured `RunConfig(max_workers=1)` to handle Groq API rate limits.
+- **Results**:
+    | Metric | Score | Interpretation |
+    | :--- | :--- | :--- |
+    | **Context Precision** | **1.00** | Perfect retrieval ranking. |
+    | **Faithfulness** | **1.00** | Answers are fully grounded in context. |
+    | **Answer Relevancy** | **0.92** | Highly relevant answers. |
+    | **Context Recall** | **1.00** | All relevant info retrieved. |
+
+- **How to Run**:
+    ```bash
+    # Ensure GROQ_API_KEY is set in .env
+    jupyter notebook tests/ragas_evaluation.ipynb
+    ```
+
 ---
 
 ## 📄 Source Code Structure
@@ -108,7 +131,10 @@ ai-engineer-assignment/
 │   └── water_tank/            # Project 2 (Vanilla JS)
 ├── tests/
 │   ├── evaluate_agent.py      # Agent Test Suite
-│   └── ...
+│   ├── ragas_evaluation.ipynb # Ragas Evaluation Notebook
+│   ├── test_max_profit.py     # Unit Tests for Max Profit
+│   ├── test_multistep_agent.py# Unit Tests for Agent
+│   └── test_rag_search.py     # Unit Tests for RAG
 ├── chroma_db/                 # Vector Store Persistence
 ├── .env                       # Secrets
 └── requirements.txt           # Python Dependencies
