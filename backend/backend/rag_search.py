@@ -243,16 +243,22 @@ def initialize_system():
     logger.info("Initializing system...")
     
     # 1. Init Vector Store (DB) without chunks first
-    vector_store = create_vector_store(chunks=None)
-    
-    # 2. Check if DB is empty
-    # Chroma wrapper usually exposes the underlying collection via _collection
     try:
+        vector_store = create_vector_store(chunks=None)
+        # 2. Check if DB is empty
+        # Chroma wrapper usually exposes the underlying collection via _collection
         collection_count = vector_store._collection.count()
     except Exception as e:
-        logger.warning(f"Could not check collection count: {e}. Assuming empty.")
-        collection_count = 0
+        logger.error(f"Failed to load Vector Store (likely corrupt or incompatible): {e}")
+        logger.info("Attempting to reset and rebuild Vector Store...")
+        import shutil
+        if os.path.exists(CHROMA_DIR):
+            shutil.rmtree(CHROMA_DIR)
         
+        # Retry creation
+        vector_store = create_vector_store(chunks=None)
+        collection_count = 0
+
     if collection_count == 0:
         logger.info("Vector store is empty. Ingesting documents...")
         docs = load_documents(DATA_DIR)
