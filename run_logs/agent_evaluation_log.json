@@ -1,0 +1,205 @@
+[
+  {
+    "type": "easy",
+    "question": "If a train leaves at 14:30 and arrives at 18:05, how long is the journey?",
+    "result": {
+      "answer": "3 hours 35 minutes",
+      "status": "success",
+      "reasoning_visible_to_user": "The journey lasts 3 hours and 35 minutes.",
+      "metadata": {
+        "plan": [
+          "1. Parse the departure time (14:30) and arrival time (18:05).",
+          "2. Convert both times to minutes past midnight.",
+          "3. Subtract departure minutes from arrival minutes to find the duration in minutes.",
+          "4. Convert the duration back to hours and minutes.",
+          "5. Format and output the result as \"X hours Y minutes\"."
+        ],
+        "checks": [
+          {
+            "check_name": "attempt_1",
+            "passed": true,
+            "details": "The calculation is correct: 18:05 (1085 minutes) minus 14:30 (870 minutes) equals 215 minutes, which is 3 hours and 35 minutes."
+          }
+        ],
+        "retries": 0
+      }
+    }
+  },
+  {
+    "type": "easy",
+    "question": "Alice has 3 red apples and twice as many green apples as red. How many apples does she have in total?",
+    "result": {
+      "answer": "9 apples",
+      "status": "success",
+      "reasoning_visible_to_user": "We have 3 red apples. For each red apple we count 2 green apples, giving 6 green apples. Together, that makes 9 apples in total.",
+      "metadata": {
+        "plan": [
+          "1. Identify the number of red apples (3).",
+          "2. Calculate the number of green apples (twice the red apples).",
+          "3. Add the red and green apples together to find the total.",
+          "4. Output the total number of apples."
+        ],
+        "checks": [
+          {
+            "check_name": "attempt_1",
+            "passed": true,
+            "details": "The calculation is correct: 3 red apples + 2*3 = 6 green apples, totaling 3 + 6 = 9 apples."
+          }
+        ],
+        "retries": 0
+      }
+    }
+  },
+  {
+    "type": "easy",
+    "question": "Calculate (25 * 4) + (100 / 2).",
+    "result": {
+      "answer": "150",
+      "status": "success",
+      "reasoning_visible_to_user": "First multiply 25 by 4 to get 100. Then divide that result by 2, giving 50. Finally, add the original 100 to 50, arriving at 150.",
+      "metadata": {
+        "plan": [
+          "1. Compute the product 25\u202f\u00d7\u202f4.",
+          "2. Compute the quotient 100\u202f\u00f7\u202f2.",
+          "3. Add the two intermediate results together."
+        ],
+        "checks": [
+          {
+            "check_name": "attempt_1",
+            "passed": true,
+            "details": "All arithmetic steps are correct: 25 \u00d7 4 = 100, 100 \u00f7 2 = 50, and 100 + 50 = 150."
+          }
+        ],
+        "retries": 0
+      }
+    }
+  },
+  {
+    "type": "easy",
+    "question": "A meeting starts at 10:00 AM and lasts 90 minutes. When does it end?",
+    "result": {
+      "answer": "11:30 AM",
+      "status": "success",
+      "reasoning_visible_to_user": "The meeting starts at 10:00\u202fAM and lasts 90\u202fminutes, so it ends at 11:30\u202fAM.",
+      "metadata": {
+        "plan": [
+          "1. Convert the start time (10:00\u202fAM) to minutes past midnight (600 minutes).",
+          "2. Add the meeting duration (90 minutes) to get the end time in minutes (690 minutes).",
+          "3. Convert the total minutes back to standard time format (11:30\u202fAM).",
+          "4. Output the end time."
+        ],
+        "checks": [
+          {
+            "check_name": "attempt_1",
+            "passed": true,
+            "details": "The calculation is correct: 10:00 AM + 90 minutes = 11:30 AM."
+          }
+        ],
+        "retries": 0
+      }
+    }
+  },
+  {
+    "type": "easy",
+    "question": "If I have 50 dollars and spend 15 on lunch and 5 on coffee, how much is left?",
+    "result": {
+      "answer": "30 dollars",
+      "status": "success",
+      "reasoning_visible_to_user": "You started with $50. After spending $15 on lunch and $5 on coffee (total $20), you have $30 left.",
+      "metadata": {
+        "plan": [
+          "1. Note the starting amount of money (50 dollars).",
+          "2. Identify the expenses: 15 dollars for lunch and 5 dollars for coffee.",
+          "3. Add the expenses together (15 + 5).",
+          "4. Subtract the total expenses from the starting amount (50 - (15 + 5)).",
+          "5. Report the resulting amount left."
+        ],
+        "checks": [
+          {
+            "check_name": "attempt_1",
+            "passed": true,
+            "details": "The arithmetic is correct: 15 + 5 = 20, and 50 - 20 = 30. The answer accurately reflects the remaining amount."
+          }
+        ],
+        "retries": 0
+      }
+    }
+  },
+  {
+    "type": "tricky",
+    "question": "I have 3 marbles. I lost 1, but then found 2 more. Then I doubled my count. How many do I have now?",
+    "result": {
+      "answer": "8 marbles",
+      "status": "success",
+      "reasoning_visible_to_user": "Start with 3 marbles. Take one away, leaving 2. Add two more, making 4. Then double that number to end up with 8 marbles.",
+      "metadata": {
+        "plan": [
+          "1. Start with 3 marbles.",
+          "2. Subtract 1 to account for the lost marble.",
+          "3. Add 2 for the marbles that were found.",
+          "4. Double the resulting count.",
+          "5. Output the final number of marbles."
+        ],
+        "checks": [
+          {
+            "check_name": "attempt_1",
+            "passed": true,
+            "details": "The arithmetic is correct: 3 - 1 = 2, 2 + 2 = 4, 4 * 2 = 8. The reasoning follows the sequence of operations described in the question."
+          }
+        ],
+        "retries": 0
+      }
+    }
+  },
+  {
+    "type": "tricky",
+    "question": "A meeting needs 60 minutes. There are free slots: 09:00\u201309:30, 09:45\u201310:30, 11:00\u201312:00. Which slots can fit the meeting?",
+    "result": {
+      "answer": "11:00\u201312:00",
+      "status": "success",
+      "reasoning_visible_to_user": "Only the third slot (11:00\u201312:00) is long enough, providing 60 minutes.",
+      "metadata": {
+        "plan": [
+          "1. Convert each free slot into start and end times in minutes past midnight.",
+          "2. Calculate the duration of each slot by subtracting the start time from the end time.",
+          "3. Compare each duration to the required 60 minutes.",
+          "4. Collect the slots whose duration is at least 60 minutes.",
+          "5. Output the list of qualifying slots."
+        ],
+        "checks": [
+          {
+            "check_name": "attempt_1",
+            "passed": true,
+            "details": "All free slots were evaluated correctly. Only the 11:00\u201312:00 slot provides exactly 60 minutes, which satisfies the meeting requirement."
+          }
+        ],
+        "retries": 0
+      }
+    }
+  },
+  {
+    "type": "tricky",
+    "question": "John is twice as old as Mary. Mary is 10 years younger than Tom. Tom is 30. How old is John?",
+    "result": {
+      "answer": "40",
+      "status": "success",
+      "reasoning_visible_to_user": "Tom is 30 years old. Mary is 10 years younger, so she is 20. John is twice Mary's age, making him 40.",
+      "metadata": {
+        "plan": [
+          "1. Note Tom\u2019s age (30).",
+          "2. Calculate Mary\u2019s age by subtracting 10 from Tom\u2019s age.",
+          "3. Determine John\u2019s age by doubling Mary\u2019s age.",
+          "4. Present John\u2019s age as the answer."
+        ],
+        "checks": [
+          {
+            "check_name": "attempt_1",
+            "passed": true,
+            "details": "The calculations are correct: Tom is 30, Mary is 20 (30 - 10), and John is twice Mary's age, 2 * 20 = 40."
+          }
+        ],
+        "retries": 0
+      }
+    }
+  }
+]

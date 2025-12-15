@@ -1,0 +1,18 @@
+2025-12-14 15:37:46,293 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-14 15:48:04,995 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-14 15:48:21,348 - backend.backend.rag_search - INFO - Initializing system...
+2025-12-14 15:48:21,579 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-12-14 15:48:27,650 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-14 15:48:28,457 - backend.backend.rag_search - INFO - Vector store loaded with 4800 existing documents. Skipping ingestion.
+2025-12-14 15:48:51,929 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 15:48:52,426 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 15:48:52,854 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-14 15:48:53,286 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 17:16:42,310 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-15 17:17:40,388 - backend.backend.rag_search - INFO - Initializing system...
+2025-12-15 17:17:40,548 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-12-15 17:17:46,780 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-15 17:17:47,527 - backend.backend.rag_search - INFO - Vector store loaded with 4800 existing documents. Skipping ingestion.
+2025-12-15 17:32:37,165 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-15 17:32:48,558 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-15 17:34:39,879 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
