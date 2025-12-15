@@ -44,3 +44,14 @@
 2025-12-16 00:18:04,657 - backend.backend.rag_search - INFO - Split into 2400 chunks
 2025-12-16 00:19:58,448 - backend.backend.rag_search - INFO - Ingested 2400 chunks into ChromaDB.
 2025-12-16 00:20:21,995 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 19:29:50,628 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-15 19:31:03,377 - backend.backend.rag_search - WARNING - GROQ_API_KEY is missing in environment variables.
+2025-12-15 19:31:03,379 - backend.backend.rag_search - INFO - Initializing system...
+2025-12-15 19:31:08,227 - backend.backend.rag_search - WARNING - HF_TOKEN is missing. You may hit rate limits with Hugging Face models.
+2025-12-15 19:31:16,417 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-12-15 19:31:19,985 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-12-15 19:31:19,986 - backend.backend.rag_search - ERROR - Failed to load Vector Store (likely corrupt or incompatible): no such column: collections.topic
+2025-12-15 19:31:19,986 - backend.backend.rag_search - INFO - Attempting to reset and rebuild Vector Store...
+2025-12-15 19:31:19,991 - backend.backend.rag_search - WARNING - HF_TOKEN is missing. You may hit rate limits with Hugging Face models.
+2025-12-15 19:31:19,994 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-12-15 19:31:20,619 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
