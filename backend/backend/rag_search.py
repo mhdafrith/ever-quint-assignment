@@ -149,11 +149,20 @@ def create_vector_store(chunks):
     else:
         logger.warning("HF_TOKEN is missing. You may hit rate limits with Hugging Face models.")
 
-    embeddings = HuggingFaceEmbeddings(
-        model_name=EMBED_MODEL,
-        model_kwargs={'device': device, 'token': hf_token},
-        encode_kwargs={'normalize_embeddings': True}
-    )
+    try:
+        embeddings = HuggingFaceEmbeddings(
+            model_name=EMBED_MODEL,
+            model_kwargs={'device': device, 'token': hf_token},
+            encode_kwargs={'normalize_embeddings': True}
+        )
+    except TypeError:
+        # Fallback for older sentence-transformers versions
+        logger.warning("Failed to init with 'token', trying 'use_auth_token'...")
+        embeddings = HuggingFaceEmbeddings(
+            model_name=EMBED_MODEL,
+            model_kwargs={'device': device, 'use_auth_token': hf_token},
+            encode_kwargs={'normalize_embeddings': True}
+        )
 
     vector_store = Chroma(
         collection_name="wikipedia_docs", # Keeping user's collection name
