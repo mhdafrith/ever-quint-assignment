@@ -1,21 +1,19 @@
 """
 PRODUCTION-READY HYBRID RETRIEVAL SYSTEM (Streamlit Compatible)
 -----------------------------------------------------------
-Features:
 ✔ Document ingestion (txt, pdf, docx, html)
 ✔ Text splitting
 ✔ MPNet embeddings (768d)
-✔ Chroma Vector Store (safe init)
+✔ Chroma Vector Store (tenant-safe)
 ✔ Wikipedia Retriever
 ✔ Hybrid Retrieval (Local + Wikipedia)
 ✔ Answer generation using Groq LLaMA 3.3 70B
 ✔ Logging + Error Handling
-✔ Cloud-safe & Idempotent
+✔ Streamlit Cloud compatible
 """
 
 import os
 import logging
-import requests
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -53,8 +51,12 @@ CHROMA_DIR = BASE_DIR / "chroma_db"
 EMBED_MODEL = "sentence-transformers/all-mpnet-base-v2"
 LLM_MODEL = "llama-3.3-70b-versatile"
 
+CHROMA_TENANT = "default_tenant"
+CHROMA_DATABASE = "default_database"
+COLLECTION_NAME = "wikipedia_docs"
+
 # ------------------------------------------------------------------
-# Utility
+# Utilities
 # ------------------------------------------------------------------
 def get_groq_api_key():
     key = os.getenv("GROQ_API_KEY")
@@ -71,7 +73,7 @@ def create_embeddings():
         import torch
         if torch.backends.mps.is_available():
             device = "mps"
-    except:
+    except Exception:
         pass
 
     return HuggingFaceEmbeddings(
@@ -85,11 +87,12 @@ def create_embeddings():
 # ------------------------------------------------------------------
 def load_documents(data_dir: Path):
     logger.info(f"Loading documents from {data_dir}")
+
     loaders = {
         "*.txt": TextLoader,
         "*.pdf": PyPDFLoader,
         "*.docx": Docx2txtLoader,
-        "*.html": UnstructuredHTMLLoader
+        "*.html": UnstructuredHTMLLoader,
     }
 
     documents = []
@@ -163,10 +166,9 @@ def create_prompt():
 def create_summary_prompt():
     return ChatPromptTemplate.from_messages([
         ("system",
-         "You are a professional research summarizer.\n"
-         "Follow length instruction strictly: {length_instruction}"),
-        ("human",
-         "Context:\n{context}\n\nTopic:\n{question}")
+         "You are a professional research summarizer. "
+         "Follow the length instruction strictly: {length_instruction}"),
+        ("human", "Context:\n{context}\n\nTopic:\n{question}")
     ])
 
 # ------------------------------------------------------------------
@@ -180,7 +182,7 @@ def generate_summary(llm, prompt, question, context, length="Medium"):
     length_map = {
         "Short": "2–3 sentences",
         "Medium": "1 paragraph",
-        "Long": "Detailed explanation with bullets"
+        "Long": "Detailed explanation with bullet points"
     }
     chain = prompt | llm | StrOutputParser()
     return chain.invoke({
@@ -190,14 +192,13 @@ def generate_summary(llm, prompt, question, context, length="Medium"):
     })
 
 # ------------------------------------------------------------------
-# INITIALIZATION (CRITICAL FIX)
+# INITIALIZATION (TENANT-SAFE & CLOUD-SAFE)
 # ------------------------------------------------------------------
 def initialize_system():
-    logger.info("Initializing RAG system")
+    logger.info("Initializing Hybrid RAG system")
 
     embeddings = create_embeddings()
 
-    # 🔐 SAFE: Create DB only once
     if not CHROMA_DIR.exists():
         logger.info("Chroma DB not found. Creating new vector store...")
 
@@ -207,18 +208,23 @@ def initialize_system():
         vector_store = Chroma.from_documents(
             documents=chunks,
             embedding=embeddings,
-            collection_name="wikipedia_docs",
-            persist_directory=str(CHROMA_DIR)
+            collection_name=COLLECTION_NAME,
+            persist_directory=str(CHROMA_DIR),
+            tenant=CHROMA_TENANT,
+            database=CHROMA_DATABASE
         )
         vector_store.persist()
         logger.info(f"Vector DB created with {len(chunks)} chunks")
 
     else:
         logger.info("Existing Chroma DB found. Loading...")
+
         vector_store = Chroma(
-            collection_name="wikipedia_docs",
+            collection_name=COLLECTION_NAME,
             embedding_function=embeddings,
-            persist_directory=str(CHROMA_DIR)
+            persist_directory=str(CHROMA_DIR),
+            tenant=CHROMA_TENANT,
+            database=CHROMA_DATABASE
         )
 
     vector_ret, wiki_ret = create_retrievers(vector_store)
@@ -256,7 +262,7 @@ def hybrid_retrieve(vector_ret, wiki_ret, query):
     return "\n\n".join(context_parts)
 
 # ------------------------------------------------------------------
-# Entry
+# Entry Point
 # ------------------------------------------------------------------
 if __name__ == "__main__":
     initialize_system()
