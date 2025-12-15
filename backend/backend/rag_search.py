@@ -4,18 +4,21 @@ PRODUCTION-READY HYBRID RETRIEVAL SYSTEM (Streamlit Compatible)
 ✔ Document ingestion (txt, pdf, docx, html)
 ✔ Text splitting
 ✔ MPNet embeddings (768d)
-✔ Chroma Vector Store (tenant-safe)
+✔ Chroma Vector Store (embedded, tenant-free)
 ✔ Wikipedia Retriever
 ✔ Hybrid Retrieval (Local + Wikipedia)
 ✔ Answer generation using Groq LLaMA 3.3 70B
 ✔ Logging + Error Handling
-✔ Streamlit Cloud compatible
+✔ Streamlit Cloud safe
 """
 
 import os
 import logging
 from pathlib import Path
 from dotenv import load_dotenv
+
+import chromadb
+from chromadb.config import Settings
 
 from langchain_community.document_loaders import (
     DirectoryLoader, TextLoader, PyPDFLoader,
@@ -50,9 +53,6 @@ CHROMA_DIR = BASE_DIR / "chroma_db"
 
 EMBED_MODEL = "sentence-transformers/all-mpnet-base-v2"
 LLM_MODEL = "llama-3.3-70b-versatile"
-
-CHROMA_TENANT = "default_tenant"
-CHROMA_DATABASE = "default_database"
 COLLECTION_NAME = "wikipedia_docs"
 
 # ------------------------------------------------------------------
@@ -63,6 +63,17 @@ def get_groq_api_key():
     if not key:
         logger.warning("GROQ_API_KEY not found")
     return key
+
+# ------------------------------------------------------------------
+# Chroma Client (CRITICAL FIX)
+# ------------------------------------------------------------------
+def get_chroma_client():
+    return chromadb.Client(
+        Settings(
+            persist_directory=str(CHROMA_DIR),
+            anonymized_telemetry=False
+        )
+    )
 
 # ------------------------------------------------------------------
 # Embeddings
@@ -192,12 +203,13 @@ def generate_summary(llm, prompt, question, context, length="Medium"):
     })
 
 # ------------------------------------------------------------------
-# INITIALIZATION (TENANT-SAFE & CLOUD-SAFE)
+# INITIALIZATION (FINAL, STABLE)
 # ------------------------------------------------------------------
 def initialize_system():
     logger.info("Initializing Hybrid RAG system")
 
     embeddings = create_embeddings()
+    chroma_client = get_chroma_client()
 
     if not CHROMA_DIR.exists():
         logger.info("Chroma DB not found. Creating new vector store...")
@@ -209,22 +221,18 @@ def initialize_system():
             documents=chunks,
             embedding=embeddings,
             collection_name=COLLECTION_NAME,
-            persist_directory=str(CHROMA_DIR),
-            tenant=CHROMA_TENANT,
-            database=CHROMA_DATABASE
+            client=chroma_client
         )
         vector_store.persist()
         logger.info(f"Vector DB created with {len(chunks)} chunks")
 
     else:
-        logger.info("Existing Chroma DB found. Loading...")
+        logger.info("Existing Chroma DB found. Loading vector store...")
 
         vector_store = Chroma(
             collection_name=COLLECTION_NAME,
             embedding_function=embeddings,
-            persist_directory=str(CHROMA_DIR),
-            tenant=CHROMA_TENANT,
-            database=CHROMA_DATABASE
+            client=chroma_client
         )
 
     vector_ret, wiki_ret = create_retrievers(vector_store)
