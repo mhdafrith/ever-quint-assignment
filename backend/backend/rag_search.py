@@ -42,7 +42,7 @@ load_dotenv()
 # Path to the 'documents' folder at project root (backend/backend/../../documents)
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DATA_DIR = BASE_DIR / "backend/documents"
-CHROMA_DIR = BASE_DIR / "chroma_db"
+CHROMA_DIR ="chroma_db"
 
 EMBED_MODEL = "sentence-transformers/all-mpnet-base-v2"
 LLM_MODEL = "llama-3.3-70b-versatile"
