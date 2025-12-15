@@ -22,3 +22,10 @@
 2025-12-15 23:17:58,892 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
 2025-12-15 23:17:59,596 - backend.backend.rag_search - INFO - Vector store loaded with 2400 existing documents. Skipping ingestion.
 2025-12-15 23:18:14,406 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 23:20:02,340 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 23:20:02,878 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 23:20:03,265 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 23:20:03,566 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 23:20:27,154 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-15 23:23:53,763 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-15 23:24:06,644 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
