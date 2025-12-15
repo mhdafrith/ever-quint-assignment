@@ -1,21 +1,18 @@
-2025-12-14 15:37:46,293 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-14 15:48:04,995 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-14 15:48:21,348 - backend.backend.rag_search - INFO - Initializing system...
-2025-12-14 15:48:21,579 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-2025-12-14 15:48:27,650 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-2025-12-14 15:48:28,457 - backend.backend.rag_search - INFO - Vector store loaded with 4800 existing documents. Skipping ingestion.
-2025-12-14 15:48:51,929 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-14 15:48:52,426 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-14 15:48:52,854 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-14 15:48:53,286 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 17:16:42,310 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-15 17:17:40,388 - backend.backend.rag_search - INFO - Initializing system...
-2025-12-15 17:17:40,548 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-2025-12-15 17:17:46,780 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-2025-12-15 17:17:47,527 - backend.backend.rag_search - INFO - Vector store loaded with 4800 existing documents. Skipping ingestion.
-2025-12-15 17:32:37,165 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-15 17:32:48,558 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-15 17:34:39,879 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 22:26:50,543 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-15 22:27:05,983 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 22:27:40,007 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 22:32:34,394 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-15 22:32:47,165 - backend.backend.rag_search - INFO - Initializing system...
+2025-12-15 22:32:47,318 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-12-15 22:32:53,533 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-15 22:32:53,913 - backend.backend.rag_search - INFO - Vector store is empty. Ingesting documents...
+2025-12-15 22:32:53,913 - backend.backend.rag_search - INFO - Loading documents from: /Users/mohamedafrith/Projects/ever/ai-engineer-assignment/backend/documents
+2025-12-15 22:32:53,915 - backend.backend.rag_search - INFO - Loaded 2 files (*.txt)
+2025-12-15 22:33:31,451 - backend.backend.rag_search - INFO - Loaded 1015 files (*.pdf)
+2025-12-15 22:33:31,452 - backend.backend.rag_search - INFO - Loaded 0 files (*.docx)
+2025-12-15 22:33:34,891 - backend.backend.rag_search - INFO - Loaded 1 files (*.html)
+2025-12-15 22:33:34,891 - backend.backend.rag_search - INFO - Total documents loaded: 1018
+2025-12-15 22:33:35,109 - backend.backend.rag_search - INFO - Split into 2400 chunks
+2025-12-15 22:35:34,600 - backend.backend.rag_search - INFO - Ingested 2400 chunks into ChromaDB.
+2025-12-15 22:35:56,608 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 22:36:30,818 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 22:40:17,323 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 22:40:18,076 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-15 22:40:25,689 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
