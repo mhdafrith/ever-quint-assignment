@@ -141,9 +141,17 @@ def create_vector_store(chunks):
     except:
         pass
 
+    # Authenticate with Hugging Face if token is present
+    hf_token = os.getenv("HF_TOKEN")
+    if hf_token:
+        # caching usually works without explicit set if env is set, but explicit is safer
+        os.environ["HF_TOKEN"] = hf_token 
+    else:
+        logger.warning("HF_TOKEN is missing. You may hit rate limits with Hugging Face models.")
+
     embeddings = HuggingFaceEmbeddings(
         model_name=EMBED_MODEL,
-        model_kwargs={'device': device},
+        model_kwargs={'device': device, 'token': hf_token},
         encode_kwargs={'normalize_embeddings': True}
     )
 
