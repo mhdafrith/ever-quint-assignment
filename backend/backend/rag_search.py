@@ -37,6 +37,7 @@ logger = logging.getLogger(__name__)
 
 # Load Environment
 load_dotenv()
+os.environ["ANONYMIZED_TELEMETRY"] = "False" # Disable ChromaDB Telemetry to avoid errors
 
 # Configuration
 # Path to the 'documents' folder at project root (backend/backend/../../documents)
