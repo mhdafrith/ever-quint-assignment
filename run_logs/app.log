@@ -55,3 +55,41 @@
 2025-12-15 19:31:19,991 - backend.backend.rag_search - WARNING - HF_TOKEN is missing. You may hit rate limits with Hugging Face models.
 2025-12-15 19:31:19,994 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
 2025-12-15 19:31:20,619 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2025-12-16 01:52:47,836 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-16 01:56:35,643 - backend.backend.rag_search - INFO - Initializing RAG system
+2025-12-16 01:56:35,829 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-12-16 01:56:41,939 - backend.backend.rag_search - INFO - Loading existing vector DB...
+2025-12-16 01:56:41,970 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-16 01:56:42,244 - backend.backend.rag_search - INFO - ✓ Vector DB loaded successfully
+2025-12-16 02:02:04,152 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 02:02:32,738 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-12-16 02:05:08,343 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-12-16 02:05:28,915 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-12-16 02:06:03,410 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-12-16 02:06:19,994 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-12-16 02:10:21,498 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-16 02:10:30,828 - backend.backend.rag_search - INFO - ✓ Fetched 6 chat models from Groq API
+2025-12-16 02:10:30,842 - backend.backend.rag_search - INFO - Initializing RAG system
+2025-12-16 02:10:30,993 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-12-16 02:10:37,922 - backend.backend.rag_search - INFO - Loading existing vector DB...
+2025-12-16 02:10:37,971 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-16 02:10:38,252 - backend.backend.rag_search - INFO - ✓ Vector DB loaded successfully
+2025-12-16 02:11:03,313 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-16 02:22:17,547 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-16 02:22:17,553 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-16 02:22:17,555 - __main__ - INFO - Fetching available Groq models...
+2025-12-16 02:22:18,189 - backend.backend.rag_search - INFO - ✓ Fetched 6 chat models from Groq API
+2025-12-16 02:22:18,191 - __main__ - INFO - Retrieved 6 models
+2025-12-16 02:22:18,194 - __main__ - INFO - Initializing RAG system components...
+2025-12-16 02:22:18,194 - __main__ - INFO - RAG system initialized successfully
+2025-12-16 02:22:18,196 - __main__ - INFO - User selected model: llama-3.3-70b-versatile
+2025-12-16 02:22:34,573 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-16 02:22:34,576 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-16 02:22:34,581 - __main__ - INFO - Initializing RAG system components...
+2025-12-16 02:22:34,582 - __main__ - INFO - RAG system initialized successfully
+2025-12-16 02:22:34,587 - __main__ - INFO - User selected model: llama-3.3-70b-versatile
+2025-12-16 02:22:36,860 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-16 02:22:36,862 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-16 02:22:36,865 - __main__ - INFO - Initializing RAG system components...
+2025-12-16 02:22:36,865 - __main__ - INFO - RAG system initialized successfully
+2025-12-16 02:22:36,869 - __main__ - INFO - User selected model: meta-llama/llama-4-maverick-17b-128e-instruct

@@ -1,23 +1,32 @@
 import streamlit as st
 import sys
 import os
+import logging
 
 # fix path for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
 
+from backend.backend.logger_setup import setup_logging
 from backend.backend.rag_search import (
     initialize_system, hybrid_retrieve, answer_query, generate_summary, 
     fetch_groq_models, create_llm
 )
 
+setup_logging()
+logger = logging.getLogger(__name__)
+
 st.set_page_config(page_title="RAG Search", layout="wide")
 st.title("Production-Ready Hybrid RAG System")
 st.markdown("Retrieves from **Local Documents** (Vector) and **Wikipedia**.")
+logger.info("Document Search (RAG) app loaded")
 
 # 1. Fetch Models (Cached)
 @st.cache_data
 def get_models_v2():
-    return fetch_groq_models()
+    logger.info("Fetching available Groq models...")
+    models = fetch_groq_models()
+    logger.info(f"Retrieved {len(models)} models")
+    return models
 
 available_models = get_models_v2()
 
@@ -28,10 +37,13 @@ def get_rag_system_v5():
 
 try:
     with st.spinner("Initializing RAG System (Loading Docs & Retrievers)..."):
+        logger.info("Initializing RAG system components...")
         # Unpack 4 values: ret, ret, prompt, prompt
         vector_ret, wiki_ret, prompt, summary_prompt = get_rag_system_v5()
+    logger.info("RAG system initialized successfully")
     st.success("System Initialized!")
 except Exception as e:
+    logger.error(f"Failed to initialize RAG system: {e}", exc_info=True)
     st.error(f"Failed to initialize system: {e}")
     st.stop()
 
@@ -48,6 +60,7 @@ config_col1, config_col2, config_col3 = st.columns([1, 1, 1])
 with config_col1:
     # Model Selector
     selected_model = st.selectbox("LLM Model", options=available_models, index=0)
+    logger.info(f"User selected model: {selected_model}")
 
 with config_col2:
     # Mode Selector
@@ -139,6 +152,7 @@ if query := st.chat_input("Message RAG..."):
 # Correct pattern: If last message is user, generate answer.)
 if st.session_state.messages and st.session_state.messages[-1]["role"] == "user":
     user_query = st.session_state.messages[-1]["content"]
+    logger.info(f"Processing user query: {user_query[:100]}...")  # Log first 100 chars
     
     # Add to global history
     if user_query not in global_history:
@@ -147,21 +161,31 @@ if st.session_state.messages and st.session_state.messages[-1]["role"] == "user"
     with st.chat_message("assistant"):
         llm = create_llm(selected_model)
         if not llm:
+             logger.error("LLM initialization failed - missing API key")
              st.error("LLM not initialized. Check API Key.")
              output = "Error: LLM missing."
              retrieved_docs = []
         else:
             with st.spinner(f"Searching & Generating {mode}..."):
-                # Retrieve
-                context, retrieved_docs = hybrid_retrieve(vector_ret, wiki_ret, user_query)
-                
-                # Generate
-                if mode == "Summarization":
-                    output = generate_summary(llm, summary_prompt, user_query, context, length=summary_length)
-                else:
-                    output = answer_query(llm, prompt, user_query, context)
-                
-                st.markdown(output)
+                try:
+                    # Retrieve
+                    logger.info(f"Retrieving context for query with mode: {mode}")
+                    context, retrieved_docs = hybrid_retrieve(vector_ret, wiki_ret, user_query)
+                    logger.info(f"Retrieved {len(retrieved_docs)} documents")
+                    
+                    # Generate
+                    if mode == "Summarization":
+                        output = generate_summary(llm, summary_prompt, user_query, context, length=summary_length)
+                    else:
+                        output = answer_query(llm, prompt, user_query, context)
+                    
+                    logger.info(f"Generated response (length: {len(output)} chars)")
+                    st.markdown(output)
+                except Exception as e:
+                    logger.error(f"Error during retrieval/generation: {e}", exc_info=True)
+                    output = f"Error: {str(e)}"
+                    retrieved_docs = []
+                    st.error(output)
                 
                 # Show Sources underneath
                 if retrieved_docs:

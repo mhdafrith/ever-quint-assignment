@@ -1,9 +1,20 @@
 import streamlit as st
 import streamlit.components.v1 as components
 import os
+import sys
+import logging
+
+# fix path for imports
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
+
+from backend.backend.logger_setup import setup_logging
+
+setup_logging()
+logger = logging.getLogger(__name__)
 
 st.title("Water Tank (Frontend) - Embedded")
 st.markdown("This page embeds the static vanilla JS frontend for the Water Tank problem.")
+logger.info("Water Tank app loaded")
 
 # Serve local file — for local dev, you can embed file content:
 # Relative path from backend/pages/ to frontend/water_tank/index.html
@@ -30,6 +41,8 @@ if os.path.exists(html_path):
             # Replace the script tag src
             html = html.replace('<script src="app.js"></script>', f'<script>{js}</script>')
 
+    logger.info("Successfully loaded Water Tank frontend")
     components.html(html, height=700, scrolling=True)
 else:
+    logger.error(f"Frontend HTML file not found at {html_path}")
     st.error("Frontend HTML file not found.")

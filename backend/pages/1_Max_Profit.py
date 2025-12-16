@@ -1,17 +1,25 @@
 import streamlit as st
 import sys
 import os
+import logging
 
 # fix path for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
 
+from backend.backend.logger_setup import setup_logging
 from backend.backend.max_profit import max_profit_schedule
 
+setup_logging()
+logger = logging.getLogger(__name__)
+
 st.title("Max Profit Scheduling (Mars Land)")
+logger.info("Max Profit app loaded")
 
 n = st.number_input("Total time units (n)", min_value=0, max_value=1000, value=13, step=1)
 if st.button("Compute optimal schedule"):
+    logger.info(f"Computing optimal schedule for n={n}")
     res = max_profit_schedule(n)
+    logger.info(f"Found {len(res['solutions'])} optimal solution(s) with profit ${res['profit']}")
     st.write("**Total Earnings:**", f"${res['profit']}")
     
     solutions = res['solutions']

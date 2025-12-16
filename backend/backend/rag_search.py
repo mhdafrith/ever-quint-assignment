@@ -1,24 +1,9 @@
-"""
-PRODUCTION-READY HYBRID RETRIEVAL SYSTEM (Streamlit Compatible)
------------------------------------------------------------
-✔ Document ingestion (txt, pdf, docx, html)
-✔ Text splitting
-✔ MPNet embeddings (768d)
-✔ Chroma Vector Store (embedded, tenant-free)
-✔ Wikipedia Retriever
-✔ Hybrid Retrieval (Local + Wikipedia)
-✔ Answer generation using Groq LLaMA 3.3 70B
-✔ Logging + Error Handling
-✔ Streamlit Cloud safe
-"""
+
 
 import os
 import logging
 from pathlib import Path
 from dotenv import load_dotenv
-
-import chromadb
-from chromadb.config import Settings
 
 from langchain_community.document_loaders import (
     DirectoryLoader, TextLoader, PyPDFLoader,
@@ -42,7 +27,7 @@ logger = logging.getLogger(__name__)
 # Environment
 # ------------------------------------------------------------------
 load_dotenv()
-os.environ["ANONYMIZED_TELEMETRY"] = "False"
+
 
 # ------------------------------------------------------------------
 # Paths & Config
@@ -53,7 +38,7 @@ CHROMA_DIR = BASE_DIR / "chroma_db"
 
 EMBED_MODEL = "sentence-transformers/all-mpnet-base-v2"
 LLM_MODEL = "llama-3.3-70b-versatile"
-COLLECTION_NAME = "wikipedia_docs"
+COLLECTION_NAME = "ever_quint"
 
 # ------------------------------------------------------------------
 # Utilities
@@ -64,16 +49,65 @@ def get_groq_api_key():
         logger.warning("GROQ_API_KEY not found")
     return key
 
-# ------------------------------------------------------------------
-# Chroma Client (CRITICAL FIX)
-# ------------------------------------------------------------------
-def get_chroma_client():
-    return chromadb.Client(
-        Settings(
-            persist_directory=str(CHROMA_DIR),
-            anonymized_telemetry=False
-        )
-    )
+def fetch_groq_models():
+    """Dynamically fetch available chat models from Groq API (text generation/summarization only)."""
+    api_key = get_groq_api_key()
+    
+    if not api_key:
+        logger.error("GROQ_API_KEY not found. Cannot fetch models.")
+        return []
+    
+    try:
+        import requests
+        url = "https://api.groq.com/openai/v1/models"
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        }
+        
+        response = requests.get(url, headers=headers, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            
+            # Filter for chat completion models (text generation/summarization)
+            # Include models with these keywords, exclude safety/audio models
+            models = []
+            for model in data.get("data", []):
+                model_id = model.get("id", "")
+                model_id_lower = model_id.lower()
+                
+                # Include chat/text generation models
+                is_chat_model = any(keyword in model_id_lower for keyword in [
+                    "versatile", "instruct", "instant", "chat"
+                ])
+                
+                # Also include specific model families known for chat
+                is_llm_family = any(family in model_id_lower for family in [
+                    "llama-3", "mixtral", "gemma"
+                ])
+                
+                # Exclude non-chat models
+                is_excluded = any(excluded in model_id_lower for excluded in [
+                    "guard", "whisper", "distil-whisper", "embedding"
+                ])
+                
+                if (is_chat_model or is_llm_family) and not is_excluded:
+                    models.append(model_id)
+            
+            if models:
+                logger.info(f"✓ Fetched {len(models)} chat models from Groq API")
+                return sorted(models, reverse=True)  # Newest first
+            else:
+                logger.warning("No suitable chat models found in API response")
+                return []
+        else:
+            logger.error(f"API request failed with status {response.status_code}")
+            return []
+        
+    except Exception as e:
+        logger.error(f"Failed to fetch models from Groq API: {e}")
+        return []
 
 # ------------------------------------------------------------------
 # Embeddings
@@ -206,14 +240,13 @@ def generate_summary(llm, prompt, question, context, length="Medium"):
 # INITIALIZATION (FINAL, STABLE)
 # ------------------------------------------------------------------
 def initialize_system():
-    logger.info("Initializing Hybrid RAG system")
+    """Initialize RAG system: load existing VDB or create new one with all documents."""
+    logger.info("Initializing RAG system")
 
     embeddings = create_embeddings()
-    chroma_client = get_chroma_client()
 
     if not CHROMA_DIR.exists():
-        logger.info("Chroma DB not found. Creating new vector store...")
-
+        logger.info("Vector DB not found. Processing all documents...")
         docs = load_documents(DATA_DIR)
         chunks = split_documents(docs)
 
@@ -221,19 +254,17 @@ def initialize_system():
             documents=chunks,
             embedding=embeddings,
             collection_name=COLLECTION_NAME,
-            client=chroma_client
+            persist_directory=str(CHROMA_DIR)
         )
-        vector_store.persist()
-        logger.info(f"Vector DB created with {len(chunks)} chunks")
-
+        logger.info(f"✓ Created vector DB with {len(chunks)} chunks")
     else:
-        logger.info("Existing Chroma DB found. Loading vector store...")
-
+        logger.info("Loading existing vector DB...")
         vector_store = Chroma(
             collection_name=COLLECTION_NAME,
             embedding_function=embeddings,
-            client=chroma_client
+            persist_directory=str(CHROMA_DIR)
         )
+        logger.info("✓ Vector DB loaded successfully")
 
     vector_ret, wiki_ret = create_retrievers(vector_store)
     prompt = create_prompt()
@@ -245,8 +276,12 @@ def initialize_system():
 # HYBRID RETRIEVAL
 # ------------------------------------------------------------------
 def hybrid_retrieve(vector_ret, wiki_ret, query):
+    """Retrieve from both vector store and Wikipedia, return (context, docs)."""
     context_parts = []
+    all_docs = []
 
+    # Vector Store retrieval
+    vec_docs = []
     try:
         vec_docs = vector_ret.invoke(query)
         if vec_docs:
@@ -254,9 +289,14 @@ def hybrid_retrieve(vector_ret, wiki_ret, query):
                 "=== LOCAL DOCUMENTS ===\n" +
                 "\n\n".join(d.page_content for d in vec_docs)
             )
+            for doc in vec_docs:
+                doc.metadata['source_type'] = 'Local Document'
+                all_docs.append(doc)
     except Exception as e:
         logger.error(f"Vector retrieval failed: {e}")
 
+    # Wikipedia retrieval
+    wiki_docs = []
     try:
         wiki_docs = wiki_ret.invoke(query)
         if wiki_docs:
@@ -264,10 +304,14 @@ def hybrid_retrieve(vector_ret, wiki_ret, query):
                 "=== WIKIPEDIA ===\n" +
                 "\n\n".join(d.page_content for d in wiki_docs)
             )
+            for doc in wiki_docs:
+                doc.metadata['source_type'] = 'Wikipedia'
+                all_docs.append(doc)
     except Exception as e:
         logger.error(f"Wikipedia retrieval failed: {e}")
 
-    return "\n\n".join(context_parts)
+    combined_context = "\n\n".join(context_parts)
+    return combined_context, all_docs
 
 # ------------------------------------------------------------------
 # Entry Point
