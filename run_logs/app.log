@@ -93,3 +93,39 @@
 2025-12-16 02:22:36,865 - __main__ - INFO - Initializing RAG system components...
 2025-12-16 02:22:36,865 - __main__ - INFO - RAG system initialized successfully
 2025-12-16 02:22:36,869 - __main__ - INFO - User selected model: meta-llama/llama-4-maverick-17b-128e-instruct
+2025-12-16 14:48:28,726 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-16 14:48:41,282 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-16 14:48:41,285 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-16 14:48:41,289 - __main__ - INFO - Fetching available Groq models...
+2025-12-16 14:48:42,093 - backend.backend.rag_search - INFO - ✓ Fetched 6 chat models from Groq API
+2025-12-16 14:48:42,097 - __main__ - INFO - Retrieved 6 models
+2025-12-16 14:48:42,103 - __main__ - INFO - Initializing RAG system components...
+2025-12-16 14:48:42,105 - backend.backend.rag_search - INFO - Initializing RAG system
+2025-12-16 14:48:42,107 - __main__ - ERROR - Failed to initialize RAG system: name 'create_embeddings' is not defined
+Traceback (most recent call last):
+  File "/Users/mohamedafrith/Projects/ever/ai-engineer-assignment/backend/pages/3_Document_Search.py", line 42, in <module>
+    vector_ret, wiki_ret, prompt, summary_prompt = get_rag_system_v5()
+  File "/Users/mohamedafrith/Projects/ever/ai-engineer-assignment/venv/lib/python3.10/site-packages/streamlit/runtime/caching/cache_utils.py", line 228, in __call__
+    return self._get_or_create_cached_value(args, kwargs, spinner_message)
+  File "/Users/mohamedafrith/Projects/ever/ai-engineer-assignment/venv/lib/python3.10/site-packages/streamlit/runtime/caching/cache_utils.py", line 270, in _get_or_create_cached_value
+    return self._handle_cache_miss(cache, value_key, func_args, func_kwargs)
+  File "/Users/mohamedafrith/Projects/ever/ai-engineer-assignment/venv/lib/python3.10/site-packages/streamlit/runtime/caching/cache_utils.py", line 329, in _handle_cache_miss
+    computed_value = self._info.func(*func_args, **func_kwargs)
+  File "/Users/mohamedafrith/Projects/ever/ai-engineer-assignment/backend/pages/3_Document_Search.py", line 36, in get_rag_system_v5
+    return initialize_system()
+  File "/Users/mohamedafrith/Projects/ever/ai-engineer-assignment/backend/../backend/backend/rag_search.py", line 237, in initialize_system
+    embeddings = create_embeddings()
+NameError: name 'create_embeddings' is not defined
+2025-12-16 14:50:30,853 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-16 14:50:39,748 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-16 14:50:39,748 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-16 14:50:39,750 - __main__ - INFO - Fetching available Groq models...
+2025-12-16 14:50:40,594 - backend.backend.rag_search - INFO - ✓ Fetched 6 chat models from Groq API
+2025-12-16 14:50:40,595 - __main__ - INFO - Retrieved 6 models
+2025-12-16 14:50:40,597 - __main__ - INFO - Initializing RAG system components...
+2025-12-16 14:50:40,598 - backend.backend.rag_search - INFO - Initializing RAG system
+2025-12-16 14:50:40,599 - backend.backend.rag_search - INFO - Loading existing vector DB...
+2025-12-16 14:50:40,617 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-16 14:50:40,915 - backend.backend.rag_search - INFO - ✓ Vector DB loaded successfully
+2025-12-16 14:50:40,920 - __main__ - INFO - RAG system initialized successfully
+2025-12-16 14:50:40,922 - __main__ - INFO - User selected model: moonshotai/kimi-k2-instruct-0905

@@ -1,12 +1,18 @@
-# AI Engineer Assignment
+# Ever Quint Assignment
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ever-quint-assignment.streamlit.app)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://13.61.59.119:8501)
 
-### 👉 **[Click here to experience the Live App](https://ever-quint-assignment.streamlit.app)**
+### 👉 **[Click here to experience the Live App](http://13.61.59.119:8501/)**
 
 This repository contains the solution for the AI Engineer Interview Assignment, consolidating four distinct projects into a single Streamlit Application.
 
-> **Deployment Note**: This application is hosted on **Streamlit Cloud**. The `GROQ_API_KEY` and other secrets are securely managed using Streamlit's secrets management (injected into `.streamlit/secrets.toml` at runtime), allowing the public repository to remain secure without exposing API keys.
+> **Deployment Note**  
+> This application is **self-hosted on an AWS EC2 instance** and runs **24/7** using a `systemd` service.  
+> The app is publicly accessible via a **static Elastic IP**:
+>
+> **http://13.61.59.119:8501**
+
+---
 
 ## 🚀 Quick Start
 
