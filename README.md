@@ -37,10 +37,7 @@ The project consolidates **multiple independent problem statements** into one co
 - Hybrid RAG (Local Documents + Wikipedia)
 - Multi-step reasoning using LLM agents
 
-> **Deployment Note**  
-> This application is **self-hosted on an AWS EC2 instance** and runs **24/7** using a `systemd` service.  
-> The app is publicly accessible via a **static Elastic IP**:
->
+
 
 
 ---
