@@ -10,7 +10,7 @@ This repository contains the solution for the AI Engineer Interview Assignment, 
 > This application is **self-hosted on an AWS EC2 instance** and runs **24/7** using a `systemd` service.  
 > The app is publicly accessible via a **static Elastic IP**:
 >
-> **http://13.61.59.119:8501**
+
 
 ---
 
@@ -25,7 +25,7 @@ This repository contains the solution for the AI Engineer Interview Assignment, 
 ```bash
 # Clone the repository (if applicable)
 # Navigate to the project directory
-cd ai-engineer-assignment
+cd ever-quint-assignment
 
 # Install dependencies
 pip install -r requirements.txt
