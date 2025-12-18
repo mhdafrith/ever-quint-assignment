@@ -409,3 +409,9 @@ NameError: name 'create_embeddings' is not defined
 2025-12-18 23:10:21,517 - __main__ - INFO - RAG system initialized successfully
 2025-12-18 23:10:25,026 - root - INFO - Logging configured from toml via dictConfig.
 2025-12-18 23:10:25,026 - __main__ - INFO - Reasoning Agent app loaded
+2025-12-18 23:17:07,062 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:17:07,066 - __main__ - INFO - Reasoning Agent app loaded
+2025-12-18 23:17:09,092 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:17:09,093 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 23:17:09,099 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 23:17:09,099 - __main__ - INFO - RAG system initialized successfully
