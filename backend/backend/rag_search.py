@@ -2,6 +2,8 @@
 
 import os
 import logging
+import tempfile
+import shutil
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -162,6 +164,67 @@ def load_documents(data_dir: Path):
     logger.info(f"Total documents loaded: {len(documents)}")
     return documents
 
+def process_uploaded_file(uploaded_file):
+    """
+    Process a Streamlit uploaded_file object:
+    1. Save to temp file
+    2. Load with appropriate loader
+    3. Split into chunks
+    4. Return chunks
+    """
+    try:
+        # Create a temp file with the same extension
+        suffix = Path(uploaded_file.name).suffix
+        with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp_file:
+            tmp_file.write(uploaded_file.getvalue())
+            tmp_path = tmp_file.name
+        
+        logger.info(f"Processing uploaded file: {uploaded_file.name} (temp: {tmp_path})")
+        
+        # Select Loader
+        if suffix == ".txt":
+            loader = TextLoader(tmp_path)
+        elif suffix == ".pdf":
+            loader = PyPDFLoader(tmp_path)
+        elif suffix == ".docx":
+            loader = Docx2txtLoader(tmp_path)
+        elif suffix == ".html":
+            loader = UnstructuredHTMLLoader(tmp_path)
+        else:
+            logger.error(f"Unsupported file type: {suffix}")
+            os.remove(tmp_path)
+            return []
+            
+        docs = loader.load()
+        # Clean up temp file
+        os.remove(tmp_path)
+        
+        # Split
+        chunks = split_documents(docs)
+        return chunks
+        
+    except Exception as e:
+        logger.error(f"Failed to process uploaded file: {e}")
+        return []
+
+def create_ephemeral_retriever(chunks):
+    """Create an in-memory vector store retriever for specific chunks."""
+    if not chunks:
+        return None
+        
+    embeddings = create_embeddings()
+    try:
+        # Chroma with no persist_directory is in-memory
+        vector_store = Chroma.from_documents(
+            documents=chunks,
+            embedding=embeddings,
+            collection_name="ephemeral_upload"
+        )
+        return vector_store.as_retriever(search_kwargs={"k": 3})
+    except Exception as e:
+        logger.error(f"Failed to create ephemeral vector store: {e}")
+        return None
+
 # ------------------------------------------------------------------
 # Text Splitting
 # ------------------------------------------------------------------
@@ -282,33 +345,35 @@ def hybrid_retrieve(vector_ret, wiki_ret, query):
 
     # Vector Store retrieval
     vec_docs = []
-    try:
-        vec_docs = vector_ret.invoke(query)
-        if vec_docs:
-            context_parts.append(
-                "=== LOCAL DOCUMENTS ===\n" +
-                "\n\n".join(d.page_content for d in vec_docs)
-            )
-            for doc in vec_docs:
-                doc.metadata['source_type'] = 'Local Document'
-                all_docs.append(doc)
-    except Exception as e:
-        logger.error(f"Vector retrieval failed: {e}")
+    if vector_ret:
+        try:
+            vec_docs = vector_ret.invoke(query)
+            if vec_docs:
+                context_parts.append(
+                    "=== LOCAL DOCUMENTS ===\n" +
+                    "\n\n".join(d.page_content for d in vec_docs)
+                )
+                for doc in vec_docs:
+                    doc.metadata['source_type'] = 'Local Document'
+                    all_docs.append(doc)
+        except Exception as e:
+            logger.error(f"Vector retrieval failed: {e}")
 
     # Wikipedia retrieval
     wiki_docs = []
-    try:
-        wiki_docs = wiki_ret.invoke(query)
-        if wiki_docs:
-            context_parts.append(
-                "=== WIKIPEDIA ===\n" +
-                "\n\n".join(d.page_content for d in wiki_docs)
-            )
-            for doc in wiki_docs:
-                doc.metadata['source_type'] = 'Wikipedia'
-                all_docs.append(doc)
-    except Exception as e:
-        logger.error(f"Wikipedia retrieval failed: {e}")
+    if wiki_ret:
+        try:
+            wiki_docs = wiki_ret.invoke(query)
+            if wiki_docs:
+                context_parts.append(
+                    "=== WIKIPEDIA ===\n" +
+                    "\n\n".join(d.page_content for d in wiki_docs)
+                )
+                for doc in wiki_docs:
+                    doc.metadata['source_type'] = 'Wikipedia'
+                    all_docs.append(doc)
+        except Exception as e:
+            logger.error(f"Wikipedia retrieval failed: {e}")
 
     combined_context = "\n\n".join(context_parts)
     return combined_context, all_docs

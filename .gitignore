@@ -39,3 +39,6 @@ venv/
 .streamlit/secrets.toml
 
 .chroma_db/
+tests/verify_upload.py
+chroma_db/chroma.sqlite3
+chroma_db/chroma.sqlite3

@@ -129,3 +129,283 @@ NameError: name 'create_embeddings' is not defined
 2025-12-16 14:50:40,915 - backend.backend.rag_search - INFO - ✓ Vector DB loaded successfully
 2025-12-16 14:50:40,920 - __main__ - INFO - RAG system initialized successfully
 2025-12-16 14:50:40,922 - __main__ - INFO - User selected model: moonshotai/kimi-k2-instruct-0905
+2025-12-18 22:19:03,053 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:19:15,279 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:19:15,280 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:19:15,282 - __main__ - INFO - Fetching available Groq models...
+2025-12-18 22:19:15,737 - backend.backend.rag_search - INFO - ✓ Fetched 6 chat models from Groq API
+2025-12-18 22:19:15,743 - __main__ - INFO - Retrieved 6 models
+2025-12-18 22:19:15,750 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:19:15,752 - backend.backend.rag_search - INFO - Initializing RAG system
+2025-12-18 22:19:15,905 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-12-18 22:19:21,817 - backend.backend.rag_search - INFO - Loading existing vector DB...
+2025-12-18 22:19:21,958 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-18 22:19:22,509 - backend.backend.rag_search - INFO - ✓ Vector DB loaded successfully
+2025-12-18 22:19:22,520 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:19:22,526 - __main__ - INFO - User selected model: moonshotai/kimi-k2-instruct-0905
+2025-12-18 22:24:19,177 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:24:19,184 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:24:19,190 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:24:19,192 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:25:55,180 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:25:55,188 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:25:55,193 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:25:55,194 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:28:47,014 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:28:47,022 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:28:47,026 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:28:47,026 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:28:50,067 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:28:50,070 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:28:50,073 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:28:50,074 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:31:58,068 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:31:58,074 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:31:58,078 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:31:58,079 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:33:31,613 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:33:31,618 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:33:31,622 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:33:31,623 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:33:31,629 - backend.backend.rag_search - INFO - Processing uploaded file: Algorithm - Max Profit.pdf (temp: /var/folders/pk/yv119hjs3_34653qn5_6djlh0000gn/T/tmpd23qp9id.pdf)
+2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 13 0 (offset 0)
+2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 15 0 (offset 0)
+2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 17 0 (offset 0)
+2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 19 0 (offset 0)
+2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 21 0 (offset 0)
+2025-12-18 22:33:32,182 - backend.backend.rag_search - INFO - Split into 4 chunks
+2025-12-18 22:33:32,186 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-12-18 22:33:38,323 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-12-18 22:34:40,799 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:34:40,807 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:34:40,834 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:34:40,835 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:34:41,037 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:34:41,039 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:34:41,040 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:34:41,040 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:34:41,043 - __main__ - INFO - Processing user query: give me summarization of the max profit pdf...
+2025-12-18 22:34:41,190 - __main__ - INFO - Retrieving context for query with mode: Summarization
+2025-12-18 22:34:41,763 - __main__ - INFO - Retrieved 3 documents
+2025-12-18 22:34:43,517 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 22:34:43,562 - __main__ - INFO - Generated response (length: 557 chars)
+2025-12-18 22:35:43,660 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:35:43,663 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:35:43,892 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:35:43,892 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:35:43,893 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:35:43,893 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:35:43,900 - backend.backend.rag_search - INFO - Processing uploaded file: mhd_afrith_AI_engineer_1year_exp_cv_v3.pdf (temp: /var/folders/pk/yv119hjs3_34653qn5_6djlh0000gn/T/tmpolpjbuvx.pdf)
+2025-12-18 22:35:44,059 - backend.backend.rag_search - INFO - Split into 7 chunks
+2025-12-18 22:35:44,061 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-12-18 22:36:10,500 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:36:10,503 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:36:10,507 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:36:10,507 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:36:10,718 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:36:10,719 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:36:10,720 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:36:10,720 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:36:38,443 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:36:38,447 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:36:38,459 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:36:38,463 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:36:38,692 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:36:38,693 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:36:38,694 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:36:38,694 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:36:38,697 - __main__ - INFO - Processing user query: give me self intro about Mohamed Afrith...
+2025-12-18 22:36:38,762 - __main__ - INFO - Retrieving context for query with mode: Summarization
+2025-12-18 22:36:39,609 - __main__ - INFO - Retrieved 3 documents
+2025-12-18 22:36:40,249 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 22:36:40,259 - __main__ - INFO - Generated response (length: 404 chars)
+2025-12-18 22:37:20,965 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:37:20,968 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:37:20,973 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:37:20,978 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:37:21,184 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:37:21,185 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:37:21,185 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:37:21,186 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:46:46,664 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:46:46,678 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:46:46,691 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:46:46,691 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:47:00,424 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:47:00,427 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:47:00,435 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:47:00,437 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:49:30,820 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:49:30,829 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:49:30,839 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:49:30,839 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:49:50,380 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:49:50,381 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:49:50,384 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:49:50,384 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:49:50,391 - backend.backend.rag_search - INFO - Processing uploaded file: Gen AI Engineer - RAG.pdf (temp: /var/folders/pk/yv119hjs3_34653qn5_6djlh0000gn/T/tmpz7equ21b.pdf)
+2025-12-18 22:49:50,400 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-12-18 22:49:50,400 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-12-18 22:49:50,400 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-12-18 22:49:50,401 - pypdf._reader - WARNING - Ignoring wrong pointing object 13 0 (offset 0)
+2025-12-18 22:49:50,401 - pypdf._reader - WARNING - Ignoring wrong pointing object 15 0 (offset 0)
+2025-12-18 22:49:50,401 - pypdf._reader - WARNING - Ignoring wrong pointing object 17 0 (offset 0)
+2025-12-18 22:49:50,401 - pypdf._reader - WARNING - Ignoring wrong pointing object 19 0 (offset 0)
+2025-12-18 22:49:50,401 - pypdf._reader - WARNING - Ignoring wrong pointing object 22 0 (offset 0)
+2025-12-18 22:49:50,465 - backend.backend.rag_search - INFO - Split into 7 chunks
+2025-12-18 22:49:50,468 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-12-18 22:50:02,532 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:50:02,535 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:50:02,538 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:50:02,538 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:50:20,642 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:50:20,644 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:50:20,647 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:50:20,648 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:50:20,767 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:50:20,768 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:50:20,769 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:50:20,769 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:50:20,771 - __main__ - INFO - Processing user query: get summary from the uploaded document...
+2025-12-18 22:50:20,795 - __main__ - INFO - Retrieving context for query with mode: Summarization
+2025-12-18 22:50:21,213 - __main__ - INFO - Retrieved 3 documents
+2025-12-18 22:50:21,907 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 22:50:21,913 - __main__ - INFO - Generated response (length: 844 chars)
+2025-12-18 22:50:46,353 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:50:46,355 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:50:46,358 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:50:46,358 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:50:46,491 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:50:46,492 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:50:46,493 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:50:46,493 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:50:46,499 - backend.backend.rag_search - INFO - Processing uploaded file: Gen AI Engineer - Multistep Reasoning.pdf (temp: /var/folders/pk/yv119hjs3_34653qn5_6djlh0000gn/T/tmpxo55rquj.pdf)
+2025-12-18 22:50:46,499 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
+2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
+2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
+2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 13 0 (offset 0)
+2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 15 0 (offset 0)
+2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 17 0 (offset 0)
+2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 19 0 (offset 0)
+2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 22 0 (offset 0)
+2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 32 0 (offset 0)
+2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 34 0 (offset 0)
+2025-12-18 22:50:46,613 - backend.backend.rag_search - INFO - Split into 10 chunks
+2025-12-18 22:50:46,615 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
+2025-12-18 22:51:07,764 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:51:07,768 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:51:07,774 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:51:07,775 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:51:10,055 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:51:10,057 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:51:10,060 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:51:10,061 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:51:29,970 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:51:29,972 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:51:29,976 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:51:29,977 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:51:30,108 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:51:30,108 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:51:30,109 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:51:30,109 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:51:30,112 - __main__ - INFO - Processing user query: what is project about?...
+2025-12-18 22:51:30,134 - __main__ - INFO - Retrieving context for query with mode: Q&A
+2025-12-18 22:51:30,989 - __main__ - INFO - Retrieved 3 documents
+2025-12-18 22:51:31,651 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 22:51:31,661 - __main__ - INFO - Generated response (length: 70 chars)
+2025-12-18 22:51:55,324 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:51:55,327 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:51:55,338 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:51:55,345 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:51:55,566 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:51:55,567 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:51:55,567 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:51:55,568 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:51:55,571 - __main__ - INFO - Processing user query: what is multi step reasoning project abouty?...
+2025-12-18 22:51:55,585 - __main__ - INFO - Retrieving context for query with mode: Q&A
+2025-12-18 22:51:55,975 - __main__ - INFO - Retrieved 3 documents
+2025-12-18 22:51:56,770 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 22:51:56,776 - __main__ - INFO - Generated response (length: 395 chars)
+2025-12-18 22:52:10,069 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:52:10,072 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:52:10,076 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:52:10,077 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:52:10,211 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:52:10,211 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:52:10,212 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:52:10,212 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:52:37,735 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:52:37,736 - __main__ - INFO - Reasoning Agent app loaded
+2025-12-18 22:52:40,627 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:52:40,629 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:52:40,633 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:52:40,634 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:54:35,690 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:54:35,713 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:54:35,721 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:54:35,722 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:54:48,672 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:54:48,675 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:54:48,677 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:54:48,678 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:55:25,444 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:55:25,446 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:55:25,453 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:55:25,456 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:58:21,267 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:58:21,272 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:58:21,276 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:58:21,276 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 22:58:58,563 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 22:58:58,569 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 22:58:58,571 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 22:58:58,571 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 23:08:03,939 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:08:03,941 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 23:08:03,944 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 23:08:03,945 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 23:09:20,728 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:09:20,737 - __main__ - INFO - Reasoning Agent app loaded
+2025-12-18 23:09:23,264 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:09:23,265 - __main__ - INFO - Reasoning Agent app loaded
+2025-12-18 23:09:23,268 - __main__ - INFO - Solving question: If a train leaves at 14:30 and arrives at 18:05, how long is the journey?...
+2025-12-18 23:09:23,898 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:09:24,407 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:09:24,786 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:09:25,051 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:09:25,056 - __main__ - INFO - Successfully solved question. Answer: 3 hours 35 minutes
+2025-12-18 23:09:42,967 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:09:42,970 - __main__ - INFO - Reasoning Agent app loaded
+2025-12-18 23:09:43,194 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:09:43,194 - __main__ - INFO - Reasoning Agent app loaded
+2025-12-18 23:09:43,195 - __main__ - INFO - Solving question: what is 1+1
+...
+2025-12-18 23:09:51,531 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:09:51,835 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:09:52,142 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:09:52,427 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-18 23:09:52,432 - __main__ - INFO - Successfully solved question. Answer: 2
+2025-12-18 23:10:09,119 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:10:09,130 - __main__ - INFO - Max Profit app loaded
+2025-12-18 23:10:10,751 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:10:10,753 - __main__ - INFO - Max Profit app loaded
+2025-12-18 23:10:10,755 - __main__ - INFO - Computing optimal schedule for n=13
+2025-12-18 23:10:10,755 - __main__ - INFO - Found 1 optimal solution(s) with profit $16500
+2025-12-18 23:10:13,933 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:10:13,935 - __main__ - INFO - Water Tank app loaded
+2025-12-18 23:10:13,937 - __main__ - INFO - Successfully loaded Water Tank frontend
+2025-12-18 23:10:17,241 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:10:18,405 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:10:18,407 - __main__ - INFO - Max Profit app loaded
+2025-12-18 23:10:20,525 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:10:20,526 - __main__ - INFO - Water Tank app loaded
+2025-12-18 23:10:20,528 - __main__ - INFO - Successfully loaded Water Tank frontend
+2025-12-18 23:10:21,509 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:10:21,511 - __main__ - INFO - Document Search (RAG) app loaded
+2025-12-18 23:10:21,516 - __main__ - INFO - Initializing RAG system components...
+2025-12-18 23:10:21,517 - __main__ - INFO - RAG system initialized successfully
+2025-12-18 23:10:25,026 - root - INFO - Logging configured from toml via dictConfig.
+2025-12-18 23:10:25,026 - __main__ - INFO - Reasoning Agent app loaded

@@ -9,15 +9,23 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
 from backend.backend.logger_setup import setup_logging
 from backend.backend.rag_search import (
     initialize_system, hybrid_retrieve, answer_query, generate_summary, 
-    fetch_groq_models, create_llm
+    fetch_groq_models, create_llm, 
+    process_uploaded_file, create_ephemeral_retriever
 )
 
 setup_logging()
 logger = logging.getLogger(__name__)
 
 st.set_page_config(page_title="RAG Search", layout="wide")
-st.title("Production-Ready Hybrid RAG System")
-st.markdown("Retrieves from **Local Documents** (Vector) and **Wikipedia**.")
+st.title("EverQuint DOC AI", help="""
+**How it works**:
+1. **Global Search**: By default, the system searches the EverQuint knowledge base and Wikipedia.
+2. **Document Search**: Upload a file (PDF, TXT, DOCX) to restrict the search to *only* that document.
+3. **Modes**:
+    - **Summarization**: Generates a concise summary of the content.
+    - **Q&A**: Answers specific questions based on the context.
+""")
+# st.markdown("Retrieves from **Local Documents** (Vector) and **Wikipedia**.") # Removed as requested
 logger.info("Document Search (RAG) app loaded")
 
 # 1. Fetch Models (Cached)
@@ -41,7 +49,7 @@ try:
         # Unpack 4 values: ret, ret, prompt, prompt
         vector_ret, wiki_ret, prompt, summary_prompt = get_rag_system_v5()
     logger.info("RAG system initialized successfully")
-    st.success("System Initialized!")
+    # st.success("System Initialized!") # Removed persistent success message
 except Exception as e:
     logger.error(f"Failed to initialize RAG system: {e}", exc_info=True)
     st.error(f"Failed to initialize system: {e}")
@@ -51,30 +59,69 @@ except Exception as e:
 @st.cache_resource
 def get_global_history():
     return []
-
 global_history = get_global_history()
 
-# 3. Top Configuration
-config_col1, config_col2, config_col3 = st.columns([1, 1, 1])
+# 3. Top Configuration Area
+st.markdown("---")
+# Layout: Left for Settings, Right for Context (Upload)
+col_settings, col_upload = st.columns([1.5, 1], gap="large")
 
-with config_col1:
-    # Model Selector
-    selected_model = st.selectbox("LLM Model", options=available_models, index=0)
-    logger.info(f"User selected model: {selected_model}")
-
-with config_col2:
-    # Mode Selector
-    mode = st.selectbox("Mode", ["Summarization", "Q&A"])
-
-with config_col3:
-    summary_length = "Medium"
-    if mode == "Summarization":
-        summary_length = st.select_slider("Length", options=["Short", "Medium", "Long"])
+with col_settings:
+    st.subheader("⚙️ Settings")
+    c1, c2 = st.columns(2)
+    with c1:
+        # Find index of Llama 3.3 Versatile if possible
+        default_ix = 0
+        for idx, m in enumerate(available_models):
+            if "llama-3.3-70b-versatile" in m:
+                default_ix = idx
+                break
+        selected_model = st.selectbox("LLM Model", options=available_models, index=default_ix)
+    with c2:
+        mode = st.selectbox("Mode", ["Summarization", "Q&A"])
     
-    # Clear Chat Button (small alignment fix needed usually, but standard button is fine)
-    if st.button("Clear Chat", use_container_width=True):
+    if mode == "Summarization":
+        summary_length = st.select_slider("Summary Length", options=["Short", "Medium", "Long"])
+    else:
+        summary_length = "Medium"
+        
+    if st.button("Clear Chat History", use_container_width=True):
         st.session_state.messages = []
         st.rerun()
+
+with col_upload:
+    st.subheader("📄 Context Source")
+    uploaded_file = st.file_uploader("Upload a document (PDF, TXT, DOCX) to focus search", type=["pdf", "txt", "docx", "html"])
+    
+    # Logic for file processing
+    if uploaded_file:
+        file_key = f"uploader_{uploaded_file.name}_{uploaded_file.size}"
+        if "current_file_key" not in st.session_state or st.session_state.current_file_key != file_key:
+            with st.spinner(f"Processing {uploaded_file.name}..."):
+                chunks = process_uploaded_file(uploaded_file)
+                if chunks:
+                    retriever = create_ephemeral_retriever(chunks)
+                    st.session_state.ephemeral_retriever = retriever
+                    st.session_state.current_file_key = file_key
+                    # Clear history for new document
+                    st.session_state.messages = []
+                    st.success(f"Locked on: {uploaded_file.name}")
+                else:
+                    st.error("Failed to process file.")
+        
+        # Override System
+        if "ephemeral_retriever" in st.session_state:
+            vector_ret = st.session_state.ephemeral_retriever
+            wiki_ret = None
+            st.info(f"✅ **Active Context**: {uploaded_file.name}")
+    else:
+        # Default State
+        st.caption("Using: **Global Knowledge Base + Wikipedia**")
+
+st.markdown("---")
+
+if "ephemeral_retriever" not in st.session_state:
+    st.toast("💡 Tip: Want to Upload Document Go Above 👆", icon="📄")
 
 # 4. Chat State
 if "messages" not in st.session_state:
@@ -142,7 +189,7 @@ else:
                         st.caption(content[:300] + "...")
 
 # 6. Chat Input (Always persistent at bottom)
-if query := st.chat_input("Message RAG..."):
+if query := st.chat_input("Ask about your document, EverQuint services, or AI technology..."):
     # Allow user to type as well
     st.session_state.messages.append({"role": "user", "content": query})
     st.rerun()
