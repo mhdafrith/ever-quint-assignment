@@ -1,16 +1,44 @@
-# Ever Quint Assignment
+# Applied AI Systems Project: Optimization, RAG, and Agentic Reasoning
+
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://13.61.59.119:8501)
 
 ### 👉 **[Click here to experience the Live App](http://13.61.59.119:8501/)**
+## ⚠️ Live Demo Availability
 
-This repository contains the solution for the AI Engineer Interview Assignment, consolidating four distinct projects into a single Streamlit Application.
+This application is deployed on **AWS EC2 (AWS Cloud)**.
 
-> **Deployment Note**  
-> This application is **self-hosted on an AWS EC2 instance** and runs **24/7** using a `systemd` service.  
-> The app is publicly accessible via a **static Elastic IP**:
->
-> **http://13.61.59.119:8501**
+To optimize cloud resource usage and cost, the EC2 instance may be **temporarily stopped when not in active use**.  
+If the live demo is unavailable at the moment, please feel free to **contact me**, and I will promptly start the instance so you can experience the application.
+
+Thank you for your understanding.
+
+---
+
+## 📬 Contact
+
+If you would like to access the live demo or discuss the project in detail, feel free to reach out:
+
+- **Name**: Mohamed Afrith  
+- **Email**: mafrith007@gmail.com  
+- [**LinkedIn**](https://www.linkedin.com/in/mohamed-afrit-s?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BnBad%2FaAFQSyzcIT%2FZX%2B%2B%2BQ%3D%3D)
+- **Phone**: +919489214174
+- [**Portfolio**](https://afrith-portfolio-sigma.vercel.app)
+
+I’m happy to walk through the architecture, design decisions, and implementation details.
+
+---
+
+
+
+The project consolidates **multiple independent problem statements** into one cohesive, production-ready web application, covering:
+- Algorithmic optimization
+- Data visualization
+- Hybrid RAG (Local Documents + Wikipedia)
+- Multi-step reasoning using LLM agents
+
+
+
 
 ---
 
@@ -25,7 +53,7 @@ This repository contains the solution for the AI Engineer Interview Assignment, 
 ```bash
 # Clone the repository (if applicable)
 # Navigate to the project directory
-cd ai-engineer-assignment
+cd ever-quint-assignment
 
 # Install dependencies
 pip install -r requirements.txt
