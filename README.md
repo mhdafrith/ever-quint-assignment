@@ -96,13 +96,17 @@ The application is structured into 4 main deliverables:
 - **Architecture**:
     - **Vector Store**: ChromaDB with `sentence-transformers/all-mpnet-base-v2`.
     - **External**: Wikipedia Retriever.
-    - **LLM**: Groq (Llama-3.3-70b) for fast inference.
+    - **LLM**: Groq (multi-model support) for fast inference.
 - **UI Features (`pages/4_rag_search.py`)**:
     - **ChatGPT-style Interface**: Conversational UI with history.
     - **Modes**: Q&A (Precise) vs Summarization (Comprehensive).
-    - **Model Selection**: Dynamically fetches available models from Groq.
+    - **Summarization Lengths**: Short (2-3 sentences), Medium (1 paragraph), Long (Detailed bullet points).
+    - **Model Selection**: Dynamically fetches all available chat models (Llama 3, Mixtral, Gemma, etc.) from Groq API.
     - **Source Attribution**: Displays retrieved chunks/metadata for every answer.
-- **Data Prep**: Documents in `backend/documents/` are automatically ingested, split (RecursiveCharacterTextSplitter), and embedded on startup (persisted to `./chroma_db`).
+- **Data Ingestion**: 
+    - **Supported Formats**: `.txt`, `.pdf`, `.docx`, `.html`.
+    - **Static Data**: Documents in `backend/documents/` are automatically ingested and persisted to `./chroma_db`.
+    - **Ephemeral Uploads**: Users can upload their own documents directly in the UI. These are processed in-memory (ephemeral vector store) for immediate chat sessions without permanently storing the data.
 
 ### 4. Multi-Step Reasoning Agent
 **Objective**: An agent that Plans, Executes, and Verifies solutions for word problems.
