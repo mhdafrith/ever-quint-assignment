@@ -2,7 +2,7 @@
 
 <div align="center">
   <video width="100%" controls autoplay loop muted>
-    <source src="assets/demo.mov" type="video/quicktime">
+    <source src="assets/demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
