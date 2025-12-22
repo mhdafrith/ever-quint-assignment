@@ -1,6 +1,8 @@
 # Applied AI Systems Project: Optimization, RAG, and Agentic Reasoning
 
-
+<div align="center">
+  <video src="assets/Screen Recording 2025-12-21 at 11.00.45 PM.mov" width="100%" controls autoplay loop muted></video>
+</div>
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://13.61.59.119:8501)
 
 ### 👉 **[Click here to experience the Live App](http://13.61.59.119:8501/)**
