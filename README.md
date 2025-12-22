@@ -1,6 +1,7 @@
 # Applied AI Systems Project: Optimization, RAG, and Agentic Reasoning
 
-<video src="assets/demo.mp4" width="100%" controls></video>
+![Demo Video](assets/demo.gif)
+
 
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://13.61.59.119:8501)
