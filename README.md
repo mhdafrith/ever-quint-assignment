@@ -1,11 +1,7 @@
 # Applied AI Systems Project: Optimization, RAG, and Agentic Reasoning
 
-<div align="center">
-  <video width="100%" controls autoplay loop muted>
-    <source src="assets/demo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
+<video src="assets/demo.mp4" width="100%" controls></video>
+
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://13.61.59.119:8501)
 
