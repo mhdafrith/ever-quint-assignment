@@ -1,8 +1,8 @@
 # Applied AI Systems Project: Optimization, RAG, and Agentic Reasoning
 
-<p align="center">
-  <video src="assets/demo.mov" width="100%" controls autoplay loop muted></video>
-</p>
+![Demo Video](assets/demo.mov)
+
+
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://13.61.59.119:8501)
 
 ### 👉 **[Click here to experience the Live App](http://13.61.59.119:8501/)**
