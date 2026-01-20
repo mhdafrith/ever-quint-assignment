@@ -38,6 +38,11 @@ def get_models_v2():
 
 available_models = get_models_v2()
 
+if not available_models:
+    logger.warning("No models fetched from Groq API. Falling back to default model.")
+    available_models = ["llama-3.3-70b-versatile"]
+
+
 # 2. Initialize System (Cached) - NOW WITHOUT LLM
 @st.cache_resource
 def get_rag_system_v5():
