@@ -1,417 +1,104 @@
-2025-12-15 22:32:34,394 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-15 22:32:47,165 - backend.backend.rag_search - INFO - Initializing system...
-2025-12-15 22:32:47,318 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-2025-12-15 22:32:53,533 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-2025-12-15 22:32:53,913 - backend.backend.rag_search - INFO - Vector store is empty. Ingesting documents...
-2025-12-15 22:32:53,913 - backend.backend.rag_search - INFO - Loading documents from: /Users/mohamedafrith/Projects/ever/ai-engineer-assignment/backend/documents
-2025-12-15 22:32:53,915 - backend.backend.rag_search - INFO - Loaded 2 files (*.txt)
-2025-12-15 22:33:31,451 - backend.backend.rag_search - INFO - Loaded 1015 files (*.pdf)
-2025-12-15 22:33:31,452 - backend.backend.rag_search - INFO - Loaded 0 files (*.docx)
-2025-12-15 22:33:34,891 - backend.backend.rag_search - INFO - Loaded 1 files (*.html)
-2025-12-15 22:33:34,891 - backend.backend.rag_search - INFO - Total documents loaded: 1018
-2025-12-15 22:33:35,109 - backend.backend.rag_search - INFO - Split into 2400 chunks
-2025-12-15 22:35:34,600 - backend.backend.rag_search - INFO - Ingested 2400 chunks into ChromaDB.
-2025-12-15 22:35:56,608 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 22:36:30,818 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 22:40:17,323 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 22:40:18,076 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 22:40:25,689 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 23:17:41,570 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-15 23:17:51,115 - backend.backend.rag_search - INFO - Initializing system...
-2025-12-15 23:17:51,299 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-2025-12-15 23:17:58,892 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-2025-12-15 23:17:59,596 - backend.backend.rag_search - INFO - Vector store loaded with 2400 existing documents. Skipping ingestion.
-2025-12-15 23:18:14,406 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 23:20:02,340 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 23:20:02,878 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 23:20:03,265 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 23:20:03,566 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 23:20:27,154 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-15 23:23:53,763 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-15 23:24:06,644 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 23:37:26,940 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-16 00:17:05,028 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-16 00:17:15,350 - backend.backend.rag_search - INFO - Initializing system...
-2025-12-16 00:17:15,707 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-2025-12-16 00:17:22,771 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-2025-12-16 00:17:23,551 - backend.backend.rag_search - INFO - Vector store is empty. Ingesting documents...
-2025-12-16 00:17:23,551 - backend.backend.rag_search - INFO - Loading documents from: /Users/mohamedafrith/Projects/ever/ai-engineer-assignment/backend/documents
-2025-12-16 00:17:23,554 - backend.backend.rag_search - INFO - Loaded 2 files (*.txt)
-2025-12-16 00:18:01,687 - backend.backend.rag_search - INFO - Loaded 1015 files (*.pdf)
-2025-12-16 00:18:01,689 - backend.backend.rag_search - INFO - Loaded 0 files (*.docx)
-2025-12-16 00:18:04,579 - backend.backend.rag_search - INFO - Loaded 1 files (*.html)
-2025-12-16 00:18:04,579 - backend.backend.rag_search - INFO - Total documents loaded: 1018
-2025-12-16 00:18:04,657 - backend.backend.rag_search - INFO - Split into 2400 chunks
-2025-12-16 00:19:58,448 - backend.backend.rag_search - INFO - Ingested 2400 chunks into ChromaDB.
-2025-12-16 00:20:21,995 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-15 19:29:50,628 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-15 19:31:03,377 - backend.backend.rag_search - WARNING - GROQ_API_KEY is missing in environment variables.
-2025-12-15 19:31:03,379 - backend.backend.rag_search - INFO - Initializing system...
-2025-12-15 19:31:08,227 - backend.backend.rag_search - WARNING - HF_TOKEN is missing. You may hit rate limits with Hugging Face models.
-2025-12-15 19:31:16,417 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-2025-12-15 19:31:19,985 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
-2025-12-15 19:31:19,986 - backend.backend.rag_search - ERROR - Failed to load Vector Store (likely corrupt or incompatible): no such column: collections.topic
-2025-12-15 19:31:19,986 - backend.backend.rag_search - INFO - Attempting to reset and rebuild Vector Store...
-2025-12-15 19:31:19,991 - backend.backend.rag_search - WARNING - HF_TOKEN is missing. You may hit rate limits with Hugging Face models.
-2025-12-15 19:31:19,994 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-2025-12-15 19:31:20,619 - chromadb.telemetry.product.posthog - ERROR - Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
-2025-12-16 01:52:47,836 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-16 01:56:35,643 - backend.backend.rag_search - INFO - Initializing RAG system
-2025-12-16 01:56:35,829 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-2025-12-16 01:56:41,939 - backend.backend.rag_search - INFO - Loading existing vector DB...
-2025-12-16 01:56:41,970 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-2025-12-16 01:56:42,244 - backend.backend.rag_search - INFO - ✓ Vector DB loaded successfully
-2025-12-16 02:02:04,152 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-16 02:02:32,738 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-12-16 02:05:08,343 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-12-16 02:05:28,915 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-12-16 02:06:03,410 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-12-16 02:06:19,994 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-2025-12-16 02:10:21,498 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-16 02:10:30,828 - backend.backend.rag_search - INFO - ✓ Fetched 6 chat models from Groq API
-2025-12-16 02:10:30,842 - backend.backend.rag_search - INFO - Initializing RAG system
-2025-12-16 02:10:30,993 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-2025-12-16 02:10:37,922 - backend.backend.rag_search - INFO - Loading existing vector DB...
-2025-12-16 02:10:37,971 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-2025-12-16 02:10:38,252 - backend.backend.rag_search - INFO - ✓ Vector DB loaded successfully
-2025-12-16 02:11:03,313 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-16 02:22:17,547 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-16 02:22:17,553 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-16 02:22:17,555 - __main__ - INFO - Fetching available Groq models...
-2025-12-16 02:22:18,189 - backend.backend.rag_search - INFO - ✓ Fetched 6 chat models from Groq API
-2025-12-16 02:22:18,191 - __main__ - INFO - Retrieved 6 models
-2025-12-16 02:22:18,194 - __main__ - INFO - Initializing RAG system components...
-2025-12-16 02:22:18,194 - __main__ - INFO - RAG system initialized successfully
-2025-12-16 02:22:18,196 - __main__ - INFO - User selected model: llama-3.3-70b-versatile
-2025-12-16 02:22:34,573 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-16 02:22:34,576 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-16 02:22:34,581 - __main__ - INFO - Initializing RAG system components...
-2025-12-16 02:22:34,582 - __main__ - INFO - RAG system initialized successfully
-2025-12-16 02:22:34,587 - __main__ - INFO - User selected model: llama-3.3-70b-versatile
-2025-12-16 02:22:36,860 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-16 02:22:36,862 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-16 02:22:36,865 - __main__ - INFO - Initializing RAG system components...
-2025-12-16 02:22:36,865 - __main__ - INFO - RAG system initialized successfully
-2025-12-16 02:22:36,869 - __main__ - INFO - User selected model: meta-llama/llama-4-maverick-17b-128e-instruct
-2025-12-16 14:48:28,726 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-16 14:48:41,282 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-16 14:48:41,285 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-16 14:48:41,289 - __main__ - INFO - Fetching available Groq models...
-2025-12-16 14:48:42,093 - backend.backend.rag_search - INFO - ✓ Fetched 6 chat models from Groq API
-2025-12-16 14:48:42,097 - __main__ - INFO - Retrieved 6 models
-2025-12-16 14:48:42,103 - __main__ - INFO - Initializing RAG system components...
-2025-12-16 14:48:42,105 - backend.backend.rag_search - INFO - Initializing RAG system
-2025-12-16 14:48:42,107 - __main__ - ERROR - Failed to initialize RAG system: name 'create_embeddings' is not defined
-Traceback (most recent call last):
-  File "/Users/mohamedafrith/Projects/ever/ai-engineer-assignment/backend/pages/3_Document_Search.py", line 42, in <module>
-    vector_ret, wiki_ret, prompt, summary_prompt = get_rag_system_v5()
-  File "/Users/mohamedafrith/Projects/ever/ai-engineer-assignment/venv/lib/python3.10/site-packages/streamlit/runtime/caching/cache_utils.py", line 228, in __call__
-    return self._get_or_create_cached_value(args, kwargs, spinner_message)
-  File "/Users/mohamedafrith/Projects/ever/ai-engineer-assignment/venv/lib/python3.10/site-packages/streamlit/runtime/caching/cache_utils.py", line 270, in _get_or_create_cached_value
-    return self._handle_cache_miss(cache, value_key, func_args, func_kwargs)
-  File "/Users/mohamedafrith/Projects/ever/ai-engineer-assignment/venv/lib/python3.10/site-packages/streamlit/runtime/caching/cache_utils.py", line 329, in _handle_cache_miss
-    computed_value = self._info.func(*func_args, **func_kwargs)
-  File "/Users/mohamedafrith/Projects/ever/ai-engineer-assignment/backend/pages/3_Document_Search.py", line 36, in get_rag_system_v5
-    return initialize_system()
-  File "/Users/mohamedafrith/Projects/ever/ai-engineer-assignment/backend/../backend/backend/rag_search.py", line 237, in initialize_system
-    embeddings = create_embeddings()
-NameError: name 'create_embeddings' is not defined
-2025-12-16 14:50:30,853 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-16 14:50:39,748 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-16 14:50:39,748 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-16 14:50:39,750 - __main__ - INFO - Fetching available Groq models...
-2025-12-16 14:50:40,594 - backend.backend.rag_search - INFO - ✓ Fetched 6 chat models from Groq API
-2025-12-16 14:50:40,595 - __main__ - INFO - Retrieved 6 models
-2025-12-16 14:50:40,597 - __main__ - INFO - Initializing RAG system components...
-2025-12-16 14:50:40,598 - backend.backend.rag_search - INFO - Initializing RAG system
-2025-12-16 14:50:40,599 - backend.backend.rag_search - INFO - Loading existing vector DB...
-2025-12-16 14:50:40,617 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-2025-12-16 14:50:40,915 - backend.backend.rag_search - INFO - ✓ Vector DB loaded successfully
-2025-12-16 14:50:40,920 - __main__ - INFO - RAG system initialized successfully
-2025-12-16 14:50:40,922 - __main__ - INFO - User selected model: moonshotai/kimi-k2-instruct-0905
-2025-12-18 22:19:03,053 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:19:15,279 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:19:15,280 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:19:15,282 - __main__ - INFO - Fetching available Groq models...
-2025-12-18 22:19:15,737 - backend.backend.rag_search - INFO - ✓ Fetched 6 chat models from Groq API
-2025-12-18 22:19:15,743 - __main__ - INFO - Retrieved 6 models
-2025-12-18 22:19:15,750 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:19:15,752 - backend.backend.rag_search - INFO - Initializing RAG system
-2025-12-18 22:19:15,905 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-2025-12-18 22:19:21,817 - backend.backend.rag_search - INFO - Loading existing vector DB...
-2025-12-18 22:19:21,958 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-2025-12-18 22:19:22,509 - backend.backend.rag_search - INFO - ✓ Vector DB loaded successfully
-2025-12-18 22:19:22,520 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:19:22,526 - __main__ - INFO - User selected model: moonshotai/kimi-k2-instruct-0905
-2025-12-18 22:24:19,177 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:24:19,184 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:24:19,190 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:24:19,192 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:25:55,180 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:25:55,188 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:25:55,193 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:25:55,194 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:28:47,014 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:28:47,022 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:28:47,026 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:28:47,026 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:28:50,067 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:28:50,070 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:28:50,073 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:28:50,074 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:31:58,068 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:31:58,074 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:31:58,078 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:31:58,079 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:33:31,613 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:33:31,618 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:33:31,622 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:33:31,623 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:33:31,629 - backend.backend.rag_search - INFO - Processing uploaded file: Algorithm - Max Profit.pdf (temp: /var/folders/pk/yv119hjs3_34653qn5_6djlh0000gn/T/tmpd23qp9id.pdf)
-2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
-2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
-2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
-2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 13 0 (offset 0)
-2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 15 0 (offset 0)
-2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 17 0 (offset 0)
-2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 19 0 (offset 0)
-2025-12-18 22:33:32,136 - pypdf._reader - WARNING - Ignoring wrong pointing object 21 0 (offset 0)
-2025-12-18 22:33:32,182 - backend.backend.rag_search - INFO - Split into 4 chunks
-2025-12-18 22:33:32,186 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-2025-12-18 22:33:38,323 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
-2025-12-18 22:34:40,799 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:34:40,807 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:34:40,834 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:34:40,835 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:34:41,037 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:34:41,039 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:34:41,040 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:34:41,040 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:34:41,043 - __main__ - INFO - Processing user query: give me summarization of the max profit pdf...
-2025-12-18 22:34:41,190 - __main__ - INFO - Retrieving context for query with mode: Summarization
-2025-12-18 22:34:41,763 - __main__ - INFO - Retrieved 3 documents
-2025-12-18 22:34:43,517 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-18 22:34:43,562 - __main__ - INFO - Generated response (length: 557 chars)
-2025-12-18 22:35:43,660 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:35:43,663 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:35:43,892 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:35:43,892 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:35:43,893 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:35:43,893 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:35:43,900 - backend.backend.rag_search - INFO - Processing uploaded file: mhd_afrith_AI_engineer_1year_exp_cv_v3.pdf (temp: /var/folders/pk/yv119hjs3_34653qn5_6djlh0000gn/T/tmpolpjbuvx.pdf)
-2025-12-18 22:35:44,059 - backend.backend.rag_search - INFO - Split into 7 chunks
-2025-12-18 22:35:44,061 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-2025-12-18 22:36:10,500 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:36:10,503 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:36:10,507 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:36:10,507 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:36:10,718 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:36:10,719 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:36:10,720 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:36:10,720 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:36:38,443 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:36:38,447 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:36:38,459 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:36:38,463 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:36:38,692 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:36:38,693 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:36:38,694 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:36:38,694 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:36:38,697 - __main__ - INFO - Processing user query: give me self intro about Mohamed Afrith...
-2025-12-18 22:36:38,762 - __main__ - INFO - Retrieving context for query with mode: Summarization
-2025-12-18 22:36:39,609 - __main__ - INFO - Retrieved 3 documents
-2025-12-18 22:36:40,249 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-18 22:36:40,259 - __main__ - INFO - Generated response (length: 404 chars)
-2025-12-18 22:37:20,965 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:37:20,968 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:37:20,973 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:37:20,978 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:37:21,184 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:37:21,185 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:37:21,185 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:37:21,186 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:46:46,664 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:46:46,678 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:46:46,691 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:46:46,691 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:47:00,424 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:47:00,427 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:47:00,435 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:47:00,437 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:49:30,820 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:49:30,829 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:49:30,839 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:49:30,839 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:49:50,380 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:49:50,381 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:49:50,384 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:49:50,384 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:49:50,391 - backend.backend.rag_search - INFO - Processing uploaded file: Gen AI Engineer - RAG.pdf (temp: /var/folders/pk/yv119hjs3_34653qn5_6djlh0000gn/T/tmpz7equ21b.pdf)
-2025-12-18 22:49:50,400 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
-2025-12-18 22:49:50,400 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
-2025-12-18 22:49:50,400 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
-2025-12-18 22:49:50,401 - pypdf._reader - WARNING - Ignoring wrong pointing object 13 0 (offset 0)
-2025-12-18 22:49:50,401 - pypdf._reader - WARNING - Ignoring wrong pointing object 15 0 (offset 0)
-2025-12-18 22:49:50,401 - pypdf._reader - WARNING - Ignoring wrong pointing object 17 0 (offset 0)
-2025-12-18 22:49:50,401 - pypdf._reader - WARNING - Ignoring wrong pointing object 19 0 (offset 0)
-2025-12-18 22:49:50,401 - pypdf._reader - WARNING - Ignoring wrong pointing object 22 0 (offset 0)
-2025-12-18 22:49:50,465 - backend.backend.rag_search - INFO - Split into 7 chunks
-2025-12-18 22:49:50,468 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-2025-12-18 22:50:02,532 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:50:02,535 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:50:02,538 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:50:02,538 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:50:20,642 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:50:20,644 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:50:20,647 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:50:20,648 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:50:20,767 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:50:20,768 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:50:20,769 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:50:20,769 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:50:20,771 - __main__ - INFO - Processing user query: get summary from the uploaded document...
-2025-12-18 22:50:20,795 - __main__ - INFO - Retrieving context for query with mode: Summarization
-2025-12-18 22:50:21,213 - __main__ - INFO - Retrieved 3 documents
-2025-12-18 22:50:21,907 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-18 22:50:21,913 - __main__ - INFO - Generated response (length: 844 chars)
-2025-12-18 22:50:46,353 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:50:46,355 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:50:46,358 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:50:46,358 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:50:46,491 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:50:46,492 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:50:46,493 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:50:46,493 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:50:46,499 - backend.backend.rag_search - INFO - Processing uploaded file: Gen AI Engineer - Multistep Reasoning.pdf (temp: /var/folders/pk/yv119hjs3_34653qn5_6djlh0000gn/T/tmpxo55rquj.pdf)
-2025-12-18 22:50:46,499 - pypdf._reader - WARNING - Ignoring wrong pointing object 6 0 (offset 0)
-2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 8 0 (offset 0)
-2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 10 0 (offset 0)
-2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 13 0 (offset 0)
-2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 15 0 (offset 0)
-2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 17 0 (offset 0)
-2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 19 0 (offset 0)
-2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 22 0 (offset 0)
-2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 32 0 (offset 0)
-2025-12-18 22:50:46,500 - pypdf._reader - WARNING - Ignoring wrong pointing object 34 0 (offset 0)
-2025-12-18 22:50:46,613 - backend.backend.rag_search - INFO - Split into 10 chunks
-2025-12-18 22:50:46,615 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-mpnet-base-v2
-2025-12-18 22:51:07,764 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:51:07,768 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:51:07,774 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:51:07,775 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:51:10,055 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:51:10,057 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:51:10,060 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:51:10,061 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:51:29,970 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:51:29,972 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:51:29,976 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:51:29,977 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:51:30,108 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:51:30,108 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:51:30,109 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:51:30,109 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:51:30,112 - __main__ - INFO - Processing user query: what is project about?...
-2025-12-18 22:51:30,134 - __main__ - INFO - Retrieving context for query with mode: Q&A
-2025-12-18 22:51:30,989 - __main__ - INFO - Retrieved 3 documents
-2025-12-18 22:51:31,651 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-18 22:51:31,661 - __main__ - INFO - Generated response (length: 70 chars)
-2025-12-18 22:51:55,324 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:51:55,327 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:51:55,338 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:51:55,345 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:51:55,566 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:51:55,567 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:51:55,567 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:51:55,568 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:51:55,571 - __main__ - INFO - Processing user query: what is multi step reasoning project abouty?...
-2025-12-18 22:51:55,585 - __main__ - INFO - Retrieving context for query with mode: Q&A
-2025-12-18 22:51:55,975 - __main__ - INFO - Retrieved 3 documents
-2025-12-18 22:51:56,770 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-18 22:51:56,776 - __main__ - INFO - Generated response (length: 395 chars)
-2025-12-18 22:52:10,069 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:52:10,072 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:52:10,076 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:52:10,077 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:52:10,211 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:52:10,211 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:52:10,212 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:52:10,212 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:52:37,735 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:52:37,736 - __main__ - INFO - Reasoning Agent app loaded
-2025-12-18 22:52:40,627 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:52:40,629 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:52:40,633 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:52:40,634 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:54:35,690 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:54:35,713 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:54:35,721 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:54:35,722 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:54:48,672 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:54:48,675 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:54:48,677 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:54:48,678 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:55:25,444 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:55:25,446 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:55:25,453 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:55:25,456 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:58:21,267 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:58:21,272 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:58:21,276 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:58:21,276 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 22:58:58,563 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 22:58:58,569 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 22:58:58,571 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 22:58:58,571 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 23:08:03,939 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:08:03,941 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 23:08:03,944 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 23:08:03,945 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 23:09:20,728 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:09:20,737 - __main__ - INFO - Reasoning Agent app loaded
-2025-12-18 23:09:23,264 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:09:23,265 - __main__ - INFO - Reasoning Agent app loaded
-2025-12-18 23:09:23,268 - __main__ - INFO - Solving question: If a train leaves at 14:30 and arrives at 18:05, how long is the journey?...
-2025-12-18 23:09:23,898 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-18 23:09:24,407 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-18 23:09:24,786 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-18 23:09:25,051 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-18 23:09:25,056 - __main__ - INFO - Successfully solved question. Answer: 3 hours 35 minutes
-2025-12-18 23:09:42,967 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:09:42,970 - __main__ - INFO - Reasoning Agent app loaded
-2025-12-18 23:09:43,194 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:09:43,194 - __main__ - INFO - Reasoning Agent app loaded
-2025-12-18 23:09:43,195 - __main__ - INFO - Solving question: what is 1+1
-...
-2025-12-18 23:09:51,531 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-18 23:09:51,835 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-18 23:09:52,142 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-18 23:09:52,427 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-12-18 23:09:52,432 - __main__ - INFO - Successfully solved question. Answer: 2
-2025-12-18 23:10:09,119 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:10:09,130 - __main__ - INFO - Max Profit app loaded
-2025-12-18 23:10:10,751 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:10:10,753 - __main__ - INFO - Max Profit app loaded
-2025-12-18 23:10:10,755 - __main__ - INFO - Computing optimal schedule for n=13
-2025-12-18 23:10:10,755 - __main__ - INFO - Found 1 optimal solution(s) with profit $16500
-2025-12-18 23:10:13,933 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:10:13,935 - __main__ - INFO - Water Tank app loaded
-2025-12-18 23:10:13,937 - __main__ - INFO - Successfully loaded Water Tank frontend
-2025-12-18 23:10:17,241 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:10:18,405 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:10:18,407 - __main__ - INFO - Max Profit app loaded
-2025-12-18 23:10:20,525 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:10:20,526 - __main__ - INFO - Water Tank app loaded
-2025-12-18 23:10:20,528 - __main__ - INFO - Successfully loaded Water Tank frontend
-2025-12-18 23:10:21,509 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:10:21,511 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 23:10:21,516 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 23:10:21,517 - __main__ - INFO - RAG system initialized successfully
-2025-12-18 23:10:25,026 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:10:25,026 - __main__ - INFO - Reasoning Agent app loaded
-2025-12-18 23:17:07,062 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:17:07,066 - __main__ - INFO - Reasoning Agent app loaded
-2025-12-18 23:17:09,092 - root - INFO - Logging configured from toml via dictConfig.
-2025-12-18 23:17:09,093 - __main__ - INFO - Document Search (RAG) app loaded
-2025-12-18 23:17:09,099 - __main__ - INFO - Initializing RAG system components...
-2025-12-18 23:17:09,099 - __main__ - INFO - RAG system initialized successfully
+2026-01-20 07:01:52,089 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 07:01:57,023 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 07:01:57,024 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 07:04:36,080 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 07:04:36,083 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 07:04:36,086 - __main__ - INFO - Solving question: If a train leaves at 14:30 and arrives at 18:05, how long is the journey?...
+2026-01-20 07:04:37,148 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:04:38,343 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:04:39,118 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:04:39,849 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:04:39,855 - __main__ - INFO - Successfully solved question. Answer: 3 hours 35 minutes
+2026-01-20 07:08:50,120 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 07:08:50,122 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 07:08:50,179 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 07:08:50,179 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 07:08:50,180 - __main__ - INFO - Solving question: 2, 6, 12, 20, 30, ___ ?...
+2026-01-20 07:08:53,216 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:08:54,899 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:08:56,222 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:08:57,150 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:08:57,152 - __main__ - INFO - Successfully solved question. Answer: 42
+2026-01-20 07:12:04,222 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 07:12:04,222 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 07:12:04,223 - __main__ - INFO - Solving question: Alice has 3 red apples and twice as many green apples as red.
+How many apples does she have in total...
+2026-01-20 07:12:05,154 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:12:05,923 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:12:06,459 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:12:06,954 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:12:06,956 - __main__ - INFO - Successfully solved question. Answer: 9 apples
+2026-01-20 07:23:33,126 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 07:23:33,126 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 07:23:33,127 - __main__ - INFO - Solving question: A meeting needs 60 minutes. There are free slots: 09:00–09:30,
+09:45–10:30, 11:00–12:00. Which slots...
+2026-01-20 07:23:34,883 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:23:36,315 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:23:37,285 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:23:37,959 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:23:37,963 - __main__ - INFO - Successfully solved question. Answer: The slot 11:00–12:00 can fit the 60‑minute meeting.
+2026-01-20 07:25:55,612 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 07:25:55,613 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 07:25:55,615 - __main__ - INFO - Solving question: Odd One Out
+Apple, Mango, Banana, Potato...
+2026-01-20 07:25:57,007 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:25:58,139 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:25:59,162 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:26:00,187 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 07:26:00,191 - __main__ - INFO - Successfully solved question. Answer: Potato
+2026-01-20 08:09:14,953 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 08:09:14,954 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 08:09:14,955 - __main__ - INFO - Solving question: Coding–Decoding
+If CAT = DBU, then DOG = ?...
+2026-01-20 08:09:16,563 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:09:17,722 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:09:19,152 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:09:20,039 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:09:20,044 - __main__ - INFO - Successfully solved question. Answer: EPH
+2026-01-20 08:11:19,928 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 08:11:19,929 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 08:11:19,969 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 08:11:19,969 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 08:11:19,970 - __main__ - INFO - Solving question: Blood Relation
+Ravi is the brother of Sita. Sita is the mother of Karan.
+How is Ravi related to Kara...
+2026-01-20 08:11:21,088 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:11:22,105 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:11:22,737 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:11:23,534 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:11:23,537 - __main__ - INFO - Successfully solved question. Answer: Ravi is Karan's maternal uncle.
+2026-01-20 08:12:39,685 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 08:12:39,687 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 08:12:41,163 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 08:12:41,165 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 08:12:41,168 - __main__ - INFO - Solving question: Direction Sense
+A person walks 10 m north, then 5 m east, then 10 m south.
+How far and in which dire...
+2026-01-20 08:12:42,793 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:12:45,031 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:12:45,966 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:12:47,318 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:12:47,324 - __main__ - INFO - Successfully solved question. Answer: 5 meters east
+2026-01-20 08:15:22,137 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 08:15:22,138 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 08:15:22,179 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 08:15:22,179 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 08:15:22,180 - __main__ - INFO - Solving question: Alphabet Series
+A, D, H, M, ___ ?...
+2026-01-20 08:15:23,502 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:15:24,337 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:15:25,678 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:15:26,707 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:15:26,710 - __main__ - INFO - Successfully solved question. Answer: S
+2026-01-20 08:16:58,728 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 08:16:58,730 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 08:17:48,702 - root - INFO - Logging configured from toml via dictConfig.
+2026-01-20 08:17:48,704 - __main__ - INFO - Reasoning Agent app loaded
+2026-01-20 08:17:48,705 - __main__ - INFO - Solving question: Logical Puzzle
+All roses are flowers. Some flowers are red.
+Which statement is definitely true?...
+2026-01-20 08:17:51,139 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:17:55,216 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:17:57,541 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:17:59,564 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-01-20 08:17:59,571 - __main__ - INFO - Successfully solved question. Answer: None of the candidate statements (All roses are red; Some roses are red; All red things are flowers;
