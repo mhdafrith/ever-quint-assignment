@@ -1,47 +1,16 @@
 # Applied AI Systems Project: Optimization, RAG, and Agentic Reasoning
 
-![Demo Video](assets/demo.gif)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://everquintassignment.streamlit.app)
 
-
-
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://13.61.59.119:8501)
-
-### 👉 **[Click here to experience the Live App](http://13.61.59.119:8501/)**
-## ⚠️ Live Demo Availability
-
-This application is deployed on **AWS EC2 (AWS Cloud)**.
-
-To optimize cloud resource usage and cost, the EC2 instance may be **temporarily stopped when not in active use**.  
-If the live demo is unavailable at the moment, please feel free to **contact me**, and I will promptly start the instance so you can experience the application.
-
-Thank you for your understanding.
+### 👉 **[Click here to experience the Live App](https://everquintassignment.streamlit.app)**
 
 ---
-
-## 📬 Contact
-
-If you would like to access the live demo or discuss the project in detail, feel free to reach out:
-
-- **Name**: Mohamed Afrith  
-- **Email**: mafrith007@gmail.com  
-- [**LinkedIn**](https://www.linkedin.com/in/mohamed-afrit-s?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BnBad%2FaAFQSyzcIT%2FZX%2B%2B%2BQ%3D%3D)
-- **Phone**: +919489214174
-- [**Portfolio**](https://afrith-portfolio-sigma.vercel.app)
-
-I’m happy to walk through the architecture, design decisions, and implementation details.
-
----
-
-
 
 The project consolidates **multiple independent problem statements** into one cohesive, production-ready web application, covering:
 - Algorithmic optimization
 - Data visualization
 - Hybrid RAG (Local Documents + Wikipedia)
 - Multi-step reasoning using LLM agents
-
-
-
 
 ---
 
@@ -150,33 +119,31 @@ The application is structured into 4 main deliverables:
 
 ---
 
-## 📄 Source Code Structure
+## 📂 Source Code Structure
 
 ```
-ai-engineer-assignment/
+ever-quint-assignment/
+├── assets/                    # Project assets (images, gifs)
 ├── backend/
-│   ├── app.py                 # Main Entry Point
-│   ├── backend/               # Core Logic
-│   │   ├── max_profit.py      # Project 1 Logic
-│   │   ├── rag_search.py      # Project 3 Logic
-│   │   ├── multistep_agent.py # Project 4 Logic
-│   │   └── utils.py
-│   ├── pages/                 # Streamlit UI Pages
-│   │   ├── 1_home.py
-│   │   ├── 2_max_profit.py
-│   │   ├── 3_multistep_agent.py
-│   │   ├── 4_rag_search.py
-│   │   └── 5_water_tank_frame.py
-│   └── documents/             # RAG Source Data
+│   ├── app.py                 # Main Streamlit Entry Point
+│   ├── backend/               # Core Logic & Utilities
+│   │   ├── max_profit.py      # Task 1: Optimization Logic
+│   │   ├── rag_search.py      # Task 3: RAG Core Logic
+│   │   ├── multistep_agent.py # Task 4: Reasoning Agent Logic
+│   │   └── logger_setup.py    # Global Logging Configuration
+│   ├── pages/                 # Streamlit UI Components
+│   │   ├── 1_Max_Profit.py
+│   │   ├── 2_Water_Tank.py
+│   │   ├── 3_Document_Search.py
+│   │   └── 4_Reasoning_Agent.py
+│   └── documents/             # Source Documents for RAG
 ├── frontend/
-│   └── water_tank/            # Project 2 (Vanilla JS)
-├── tests/
-│   ├── evaluate_agent.py      # Agent Test Suite
-│   ├── ragas_evaluation.ipynb # Ragas Evaluation Notebook
-│   ├── test_max_profit.py     # Unit Tests for Max Profit
-│   ├── test_multistep_agent.py# Unit Tests for Agent
-│   └── test_rag_search.py     # Unit Tests for RAG
-├── chroma_db/                 # Vector Store Persistence
-├── .env                       # Secrets
+│   └── water_tank/            # Task 2: Vanilla JS Implementation
+├── problem_statements/        # Original Assignment PDFs
+├── tests/                     # Evaluation & Metrics
+│   └── ragas_evaluation.ipynb # RAG Performance Analysis
+├── run_logs/                  # Runtime Logs & Agent Evals
+├── .env                       # Environment Variables (Secrets)
+├── pyproject.toml             # Project Metadata
 └── requirements.txt           # Python Dependencies
 ```
